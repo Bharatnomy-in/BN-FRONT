@@ -13,9 +13,9 @@ One row per district per month: aerosol optical depth (haze and dust), soil wetn
 - **Data:** NASA Prediction Of Worldwide Energy Resources (POWER), monthly, from the MERRA-2 reanalysis on a 0.5 x 0.625 degree grid (parameters AOD_55, GWETTOP, GWETROOT, GWETPROF, EVLAND, PBLTOP, PS, T2M, WS10M)
 - **Link:** https://power.larc.nasa.gov/ (monthly point API, no login)
 - **Downloaded:** 12 Nov 2026
-- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/datameet-maps/))
-- **Original files:** [`_sources/nasa-power/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/nasa-power/) (not committed; `pipelines/nasa-power/fetch_power_monthly.py` downloads them in about 5 minutes)
-- **Script:** [`pipelines/nasa-power/build_district_monthly.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/pipelines/nasa-power/build_district_monthly.py)
+- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/datameet-maps/))
+- **Original files:** [`_sources/nasa-power/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/nasa-power/) (not committed; `pipelines/nasa-power/fetch_power_monthly.py` downloads them in about 5 minutes)
+- **Script:** [`pipelines/nasa-power/build_district_monthly.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/pipelines/nasa-power/build_district_monthly.py)
 
 ## How it is computed
 
@@ -61,5 +61,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`CLM_aerosol-soil-evaporation-boundary-layer_1981-to-2025_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/CLM_aerosol-soil-evaporation-boundary-layer_1981-to-2025_MH_BNY_DIST) at commit `eea39efd1c2b`
+- Warehouse folder [`CLM_aerosol-soil-evaporation-boundary-layer_1981-to-2025_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/CLM_aerosol-soil-evaporation-boundary-layer_1981-to-2025_MH_BNY_DIST) at commit `930603697458`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `CLM_aerosol-soil-evaporation-boundary-layer_1981-to-2025_MH_BNY_DIST.csv`, `CLM_aerosol-soil-evaporation-boundary-layer_1981-to-2025_MH_BNY_DIST.json`.

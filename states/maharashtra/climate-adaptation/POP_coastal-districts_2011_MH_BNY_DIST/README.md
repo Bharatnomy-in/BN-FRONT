@@ -11,11 +11,11 @@ Which districts (2011 boundaries) touch the sea coast, how much coastline each h
 
 ## Source
 
-- **Coastline:** Natural Earth 1:10m coastline (public domain), file version 5.0.0-pre9, https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-coastline/ (file in [`_sources/natural-earth/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/natural-earth/raw/))
-- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/datameet-maps/))
-- **Population:** ORGI Census 2011 Primary Census Abstract, from [`POP_census-pca_2011_STATES_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/POP_census-pca_2011_STATES_ORGI_DIST/)
+- **Coastline:** Natural Earth 1:10m coastline (public domain), file version 5.0.0-pre9, https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-coastline/ (file in [`_sources/natural-earth/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/natural-earth/raw/))
+- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/datameet-maps/))
+- **Population:** ORGI Census 2011 Primary Census Abstract, from [`POP_census-pca_2011_STATES_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/POP_census-pca_2011_STATES_ORGI_DIST/)
 - **Downloaded:** 12 Nov 2026
-- **Script:** [`pipelines/natural-earth/build_coastal_districts.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/pipelines/natural-earth/build_coastal_districts.py)
+- **Script:** [`pipelines/natural-earth/build_coastal_districts.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/pipelines/natural-earth/build_coastal_districts.py)
 
 ## How it is computed
 
@@ -52,5 +52,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`POP_coastal-districts_2011_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/POP_coastal-districts_2011_STATES_BNY_DIST) at commit `eea39efd1c2b`
+- Warehouse folder [`POP_coastal-districts_2011_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/POP_coastal-districts_2011_STATES_BNY_DIST) at commit `930603697458`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `POP_coastal-districts_2011_MH_BNY_DIST.csv`, `POP_coastal-districts_2011_MH_BNY_DIST.json`.

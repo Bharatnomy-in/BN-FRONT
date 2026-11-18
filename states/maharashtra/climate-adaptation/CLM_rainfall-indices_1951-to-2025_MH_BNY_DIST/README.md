@@ -13,9 +13,9 @@ One row per district per year: annual and seasonal rainfall with departure from 
 - **Data:** India Meteorological Department (IMD), Pune. Daily rainfall on a 0.25 x 0.25 degree grid (Pai et al. 2014), 1951-2025
 - **Link:** https://imdpune.gov.in/lrfindex.php (Gridded data: `Rainfall_25_Bin.html`)
 - **Downloaded:** 28 Oct 2026
-- **District boundaries:** Census 2011 district map from DataMeet (community-made, not official), used only to decide which grid cells fall in each district. See [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/datameet-maps/)
-- **Original files:** [`_sources/imd-gridded/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/imd-gridded/) (not committed, 1.9 GB; download steps in its README)
-- **Script:** [`pipelines/imd-gridded/build_district_indices.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/pipelines/imd-gridded/build_district_indices.py)
+- **District boundaries:** Census 2011 district map from DataMeet (community-made, not official), used only to decide which grid cells fall in each district. See [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/datameet-maps/)
+- **Original files:** [`_sources/imd-gridded/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/imd-gridded/) (not committed, 1.9 GB; download steps in its README)
+- **Script:** [`pipelines/imd-gridded/build_district_indices.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/pipelines/imd-gridded/build_district_indices.py)
 
 ## How it is computed
 
@@ -40,8 +40,8 @@ One row per district per year: annual and seasonal rainfall with departure from 
 |---|---|---|---|
 | `state_ut` | text |  | Maharashtra, 27 |
 | `lgd_state_code` | text |  | Maharashtra, 27 |
-| `district` | text |  | District, by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_reference/geography.csv)) |
-| `lgd_district_code` | text |  | District, by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_reference/geography.csv)) |
+| `district` | text |  | District, by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/geography.csv)) |
+| `lgd_district_code` | text |  | District, by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/geography.csv)) |
 | `year` | text |  | Calendar year |
 | `rainfall_annual_mm` | number | mm | Total rainfall in the year, mm |
 | `rainfall_mar_may_mm` | number | mm | Pre-monsoon, south-west monsoon and north-east monsoon rainfall, mm |
@@ -81,5 +81,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST) at commit `eea39efd1c2b`
+- Warehouse folder [`CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST) at commit `930603697458`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST.csv`, `CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST.json`.

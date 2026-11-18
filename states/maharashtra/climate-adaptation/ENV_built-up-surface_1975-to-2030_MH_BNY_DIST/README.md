@@ -12,9 +12,9 @@ Area covered by buildings in every district, and its share of the district's are
 
 - **Data:** European Commission, Joint Research Centre (JRC), GHSL Data Package 2023, GHS-BUILT-S R2023A: built-up surface (total and non-residential), 30 arc-second grid (about 1 km), epochs 1975-2030
 - **Link:** https://ghsl.jrc.ec.europa.eu/ghs_buS2023.php (no login)
-- **Downloaded:** 12 Nov 2026 (grids not committed, about 3 GB; `pipelines/jrc-ghsl/fetch_ghsl.sh` downloads them, see [`_sources/jrc-ghsl/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/jrc-ghsl/))
-- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/datameet-maps/))
-- **Script:** [`pipelines/jrc-ghsl/build_district_builtup.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/pipelines/jrc-ghsl/build_district_builtup.py)
+- **Downloaded:** 12 Nov 2026 (grids not committed, about 3 GB; `pipelines/jrc-ghsl/fetch_ghsl.sh` downloads them, see [`_sources/jrc-ghsl/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/jrc-ghsl/))
+- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/datameet-maps/))
+- **Script:** [`pipelines/jrc-ghsl/build_district_builtup.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/pipelines/jrc-ghsl/build_district_builtup.py)
 
 ## How it is computed
 
@@ -51,5 +51,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`ENV_built-up-surface_1975-to-2030_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/ENV_built-up-surface_1975-to-2030_STATES_BNY_DIST) at commit `eea39efd1c2b`
+- Warehouse folder [`ENV_built-up-surface_1975-to-2030_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/ENV_built-up-surface_1975-to-2030_STATES_BNY_DIST) at commit `930603697458`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `ENV_built-up-surface_1975-to-2030_MH_BNY_DIST.csv`, `ENV_built-up-surface_1975-to-2030_MH_BNY_DIST.json`.

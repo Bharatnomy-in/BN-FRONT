@@ -65,7 +65,7 @@ Government and third-party source data keep their original terms of use. Tables 
 - **Link:** https://imdpune.gov.in/lrfindex.php (Gridded data: `Rainfall_25_Bin.html`)
 - **Used in:** `CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST`
 
-## India Meteorological Department (IMD), RSMC New Delhi, best tracks of cyclonic disturbances over the North Indian Ocean, as cleaned in [`CLM_cyclone-best-tracks_1982-to-2026_IN_IMD`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/CLM_cyclone-best-tracks_1982-to-2026_IN_IMD/)
+## India Meteorological Department (IMD), RSMC New Delhi, best tracks of cyclonic disturbances over the North Indian Ocean, as cleaned in [`CLM_cyclone-best-tracks_1982-to-2026_IN_IMD`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/CLM_cyclone-best-tracks_1982-to-2026_IN_IMD/)
 
 - **Link:** https://rsmcnewdelhi.imd.gov.in/report.php?internal_menu=MzM=
 - **Used in:** `CLM_cyclone-crossings_1982-to-2025_MH_BNY_DIST`
@@ -95,6 +95,11 @@ Government and third-party source data keep their original terms of use. Tables 
 - **Link:** https://censusindia.gov.in/nada/index.php/catalog/1457
 - **Used in:** `POP_single-year-age_2011_MH_ORGI_DIST`
 
+## Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, Houselisting and Housing Census, table HH-14 "Percentage of households to total households by amenities and assets" (one file per district, `HLPCA-27<district code>-2011_H14_census.xlsx`)
+
+- **Link:** https://censusindia.gov.in/nada/index.php/catalog (catalog ids 9795-9829; e.g. Nagpur: https://censusindia.gov.in/nada/index.php/catalog/9803)
+- **Used in:** `HOU_household-amenities-hh14_2011_MH_ORGI_DIST`
+
 ## Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, Primary Census Abstract (PCA)
 
 - **Link:** https://censusindia.gov.in/nada/index.php/catalog/6191
@@ -102,7 +107,7 @@ Government and third-party source data keep their original terms of use. Tables 
 
 ## Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, Table C-20 "Disabled population by type of disability, age and sex"
 
-- **Link:** https://censusindia.gov.in/nada/index.php/catalog (one file per state/UT plus India; catalog ids in [`_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv))
+- **Link:** https://censusindia.gov.in/nada/index.php/catalog (one file per state/UT plus India; catalog ids in [`_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv))
 - **Used in:** `POP_disabled-population_2011_MH_ORGI_DIST`
 
 ## POP_coastal-districts_2011_STATES_BNY_DIST

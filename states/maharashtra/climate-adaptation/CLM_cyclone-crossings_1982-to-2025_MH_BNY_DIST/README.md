@@ -10,11 +10,11 @@ For every district and year: how many depressions and cyclones passed over it, h
 
 ## Source
 
-- **Data:** India Meteorological Department (IMD), RSMC New Delhi, best tracks of cyclonic disturbances over the North Indian Ocean, as cleaned in [`CLM_cyclone-best-tracks_1982-to-2026_IN_IMD`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/CLM_cyclone-best-tracks_1982-to-2026_IN_IMD/)
+- **Data:** India Meteorological Department (IMD), RSMC New Delhi, best tracks of cyclonic disturbances over the North Indian Ocean, as cleaned in [`CLM_cyclone-best-tracks_1982-to-2026_IN_IMD`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/CLM_cyclone-best-tracks_1982-to-2026_IN_IMD/)
 - **Link:** https://rsmcnewdelhi.imd.gov.in/report.php?internal_menu=MzM=
 - **Downloaded:** 12 Nov 2026
-- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/datameet-maps/))
-- **Script:** [`pipelines/imd-rsmc/build_district_cyclones.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/pipelines/imd-rsmc/build_district_cyclones.py)
+- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/datameet-maps/))
+- **Script:** [`pipelines/imd-rsmc/build_district_cyclones.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/pipelines/imd-rsmc/build_district_cyclones.py)
 
 ## How it is computed
 
@@ -53,5 +53,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`CLM_cyclone-crossings_1982-to-2025_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/CLM_cyclone-crossings_1982-to-2025_STATES_BNY_DIST) at commit `eea39efd1c2b`
+- Warehouse folder [`CLM_cyclone-crossings_1982-to-2025_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/CLM_cyclone-crossings_1982-to-2025_STATES_BNY_DIST) at commit `930603697458`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `CLM_cyclone-crossings_1982-to-2025_MH_BNY_DIST.csv`, `CLM_cyclone-crossings_1982-to-2025_MH_BNY_DIST.json`.

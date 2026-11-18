@@ -15,16 +15,16 @@ Population, households, literacy, Scheduled Castes and Tribes, and workers by ca
 - **Table taken from:** "PCA SD: Primary census abstract (PCA) data, India & States/UTs - State and district level - 2011", file `DDW_PCA0000_2011_Indiastatedist.xlsx`
 - **Link:** https://censusindia.gov.in/nada/index.php/catalog/6191
 - **Downloaded:** 28 Oct 2026
-- **Original file:** [`_sources/orgi-census2011/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_sources/orgi-census2011/raw/)
+- **Original file:** [`_sources/orgi-census2011/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/orgi-census2011/raw/)
 
 ## Columns
 
 | Column | Type | Unit | Description |
 |---|---|---|---|
 | `state_ut` | text |  | State or UT as it was in 2011 (Andhra Pradesh includes Telangana; Jammu & Kashmir includes Ladakh; Dadra & Nagar Haveli and Daman & Diu are separate) |
-| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_reference/geography.csv). Blank for All India and for old units LGD no longer lists |
+| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/geography.csv). Blank for All India and for old units LGD no longer lists |
 | `district` | text |  | District as spelled by the Census. `State total` = the state's published total; blank on the `All India` row |
-| `lgd_district_code` | text |  | District code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_reference/geography.csv). Blank for totals and names that could not be matched |
+| `lgd_district_code` | text |  | District code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/geography.csv). Blank for totals and names that could not be matched |
 | `state_census_code` | text |  | Census 2011 codes (Nagpur = 27 / 505) |
 | `district_census_code` | text |  | Census 2011 codes (Nagpur = 27 / 505) |
 | `area` | text |  | `total`, `rural` or `urban` |
@@ -122,9 +122,9 @@ These describe the full warehouse table (all states).
 
 - Workers by category are the Census's closest measure of outdoor work: cultivators and agricultural labourers work outdoors; "other workers" mixes indoor and outdoor jobs (construction, transport, street vending are inside it). For job-level detail on Nagpur see `LAB_plfs-persons-nagpur_2025_MH_MOSPI_DIST`.
 - Districts are the 640 districts of 2011. Later splits are not reflected.
-- `lgd_state_code` and `lgd_district_code` added on 5 Nov 2026 from the LGD directory (see [`_reference/README.md`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/_reference/README.md)). LGD codes identify today's state or district; for years before a split (Telangana 2014, Ladakh 2019, new districts) the same code covers a larger area than it does now.
+- `lgd_state_code` and `lgd_district_code` added on 5 Nov 2026 from the LGD directory (see [`_reference/README.md`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/README.md)). LGD codes identify today's state or district; for years before a split (Telangana 2014, Ladakh 2019, new districts) the same code covers a larger area than it does now.
 
 ## Where this comes from
 
-- Warehouse folder [`POP_census-pca_2011_STATES_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/eea39efd1c2b3c3ee8d93e2a99b9fb7981332889/POP_census-pca_2011_STATES_ORGI_DIST) at commit `eea39efd1c2b`
+- Warehouse folder [`POP_census-pca_2011_STATES_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/POP_census-pca_2011_STATES_ORGI_DIST) at commit `930603697458`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `POP_census-pca_2011_MH_ORGI_DIST.csv`, `POP_census-pca_2011_MH_ORGI_DIST.json`.
