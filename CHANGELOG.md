@@ -2,6 +2,10 @@
 
 One entry each time `config/warehouse.lock` moves (`python build.py --update-lock`).
 
+## 2026-11-18: warehouse `b8f4a587d0b9` → `cd7ce2d67310`
+
+- Added: `LAB_main-workers-by-industry_2011_MH_ORGI_DIST` (1,470 rows)
+
 ## 2026-11-18: warehouse `930603697458` → `b8f4a587d0b9`
 
 - Added: `ENG_solar-pv-output-monthly_1999-to-2018_MH_BNY_DIST` (420 rows)
