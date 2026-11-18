@@ -1,0 +1,3 @@
+dataset,new_column,formula,unit,description
+# Add one row per derived column. Lines starting with # are ignored. Example:
+# POP_census-pca_2011_MH_ORGI_DIST,share_sc_pct,population_sc / population_total * 100,%,Share of Scheduled Castes in total population

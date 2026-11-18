@@ -1,0 +1,31 @@
+# Rebuild from the pinned warehouse commit and fail if the committed output differs,
+# or if any check fails. Runs on every push and pull request.
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Keep the committed BUILD_INFO.json to compare later
+        run: cp BUILD_INFO.json /tmp/BUILD_INFO.committed.json
+      - name: Pinned build + checks
+        run: python build.py
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Output must match a fresh build
+        run: |
+          # BUILD_INFO.json holds the build date, so compare it without that field.
+          git diff --stat --exit-code -- . ':(exclude)BUILD_INFO.json'
+          diff <(jq 'del(.build_date)' /tmp/BUILD_INFO.committed.json) <(jq 'del(.build_date)' BUILD_INFO.json)
+          test -z "$(git status --porcelain --untracked-files=all -- states)" || { git status --porcelain -- states; exit 1; }
