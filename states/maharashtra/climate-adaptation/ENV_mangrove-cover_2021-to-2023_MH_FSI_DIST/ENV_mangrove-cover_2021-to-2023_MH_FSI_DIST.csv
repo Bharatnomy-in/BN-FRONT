@@ -1,0 +1,15 @@
+state_ut,lgd_state_code,district,lgd_district_code,year,very_dense_mangrove_sq_km,moderately_dense_mangrove_sq_km,open_mangrove_sq_km,mangrove_cover_total_sq_km,change_since_2021_sq_km,source_flag
+Maharashtra,27,Mumbai,482,2021,0.00,0.42,2.43,2.85,,not_applicable
+Maharashtra,27,Mumbai,482,2023,0.00,0.38,2.44,2.82,-0.03,
+Maharashtra,27,Mumbai Suburban,483,2021,0.00,25.29,31.69,56.98,,not_applicable
+Maharashtra,27,Mumbai Suburban,483,2023,0.00,25.15,31.65,56.80,-0.18,
+Maharashtra,27,Raigad,491,2021,0.00,14.66,104.29,118.95,,not_applicable
+Maharashtra,27,Raigad,491,2023,0.00,18.75,107.57,126.32,7.37,
+Maharashtra,27,Ratnagiri,492,2021,0.00,13.71,15.29,29.00,,not_applicable
+Maharashtra,27,Ratnagiri,492,2023,0.00,13.78,16.72,30.50,1.50,
+Maharashtra,27,Sindhudurg,495,2021,0.00,4.98,5.82,10.80,,not_applicable
+Maharashtra,27,Sindhudurg,495,2023,0.00,4.64,6.68,11.32,0.52,
+Maharashtra,27,Thane,497,2021,0.00,24.88,24.98,49.86,,not_applicable
+Maharashtra,27,Thane,497,2023,0.00,24.84,24.09,48.93,-0.93,
+Maharashtra,27,Palghar,665,2021,0.00,2.27,31.99,34.26,,not_applicable
+Maharashtra,27,Palghar,665,2023,0.00,2.28,36.12,38.40,4.14,
