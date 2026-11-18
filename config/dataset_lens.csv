@@ -2,3 +2,4 @@ dataset,lens_id,note
 AGR_crop-area-production-yield_1997-98-to-2009-10_STATES_MOAFW_DIST,COM,Approved 2026-11-18: older part of crop area/production/yield; same lens as the 2010-11 part (COM-CROPS)
 POP_census-pca_2011_STATES_ORGI_DIST,CAR,Approved 2026-11-18: overrides the 2 CAR / 2 MAC tie in variables.csv (CAR-EXPOSURE)
 WAT_tap-water-connections-rural_2026-10_STATES_MOJS_DIST,CAR,Approved 2026-11-18: rural tap water coverage (CAR-WATER)
+HOU_household-amenities-hh14_2011_MH_ORGI_DIST,EPM,2026-11-18: not in variables.csv; its sub-district twin maps to EPM (7 variables) vs CAR (4); added for the energy district-data task (EPM-ACCESS)

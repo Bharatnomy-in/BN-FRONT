@@ -17,8 +17,8 @@ jobs:
           cache: pip
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Keep the committed BUILD_INFO.json to compare later
-        run: cp BUILD_INFO.json /tmp/BUILD_INFO.committed.json
+      - name: Keep the committed BUILD_INFO.json and BUILD_REPORT.md to compare later
+        run: cp BUILD_INFO.json /tmp/BUILD_INFO.committed.json && cp BUILD_REPORT.md /tmp/BUILD_REPORT.committed.md
       - name: Pinned build + checks
         run: python build.py
       - name: Unit tests
@@ -26,6 +26,9 @@ jobs:
       - name: Output must match a fresh build
         run: |
           # BUILD_INFO.json holds the build date, so compare it without that field.
-          git diff --stat --exit-code -- . ':(exclude)BUILD_INFO.json'
+          # BUILD_REPORT.md's "Column changes since last build" depends on the previous build, so skip that section.
+          git diff --stat --exit-code -- . ':(exclude)BUILD_INFO.json' ':(exclude)BUILD_REPORT.md'
           diff <(jq 'del(.build_date)' /tmp/BUILD_INFO.committed.json) <(jq 'del(.build_date)' BUILD_INFO.json)
+          strip() { awk '/^## /{skip = ($0 == "## Column changes since last build")} !skip' "$1"; }
+          diff <(strip /tmp/BUILD_REPORT.committed.md) <(strip BUILD_REPORT.md)
           test -z "$(git status --porcelain --untracked-files=all -- states)" || { git status --porcelain -- states; exit 1; }
