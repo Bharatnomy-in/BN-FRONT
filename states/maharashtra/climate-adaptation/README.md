@@ -16,5 +16,6 @@
 | [`POP_census-pca_2011_MH_ORGI_DIST`](POP_census-pca_2011_MH_ORGI_DIST/) | Primary Census Abstract by district, 2011 | 2011 | 105 |
 | [`POP_coastal-districts_2011_MH_BNY_DIST`](POP_coastal-districts_2011_MH_BNY_DIST/) | Coastal districts and their population, 2011 | 2011 | 35 |
 | [`POP_disabled-population_2011_MH_ORGI_DIST`](POP_disabled-population_2011_MH_ORGI_DIST/) | Disabled population by type of disability, age and sex, India, states and districts, 2011 | 2011 | 1,365 |
+| [`POP_population-grid_1975-to-2030_MH_BNY_DIST`](POP_population-grid_1975-to-2030_MH_BNY_DIST/) | Population by district from the GHSL grid, India, 1975 to 2030 (every 5 years) | 1975 to 2030 | 420 |
 | [`POP_single-year-age_2011_MH_ORGI_DIST`](POP_single-year-age_2011_MH_ORGI_DIST/) | Population by single year of age, Maharashtra districts, 2011 | 2011 | 3,605 |
 | [`WAT_tap-water-connections-rural_2026-10_MH_MOJS_DIST`](WAT_tap-water-connections-rural_2026-10_MH_MOJS_DIST/) | Rural households with tap water connections by district, Oct 2026 | 2026-10 | 34 |

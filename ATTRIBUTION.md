@@ -30,6 +30,11 @@ Government and third-party source data keep their original terms of use. Tables 
 - **Link:** https://ghsl.jrc.ec.europa.eu/ghs_buS2023.php (no login)
 - **Used in:** `ENV_built-up-surface_1975-to-2030_MH_BNY_DIST`
 
+## European Commission, Joint Research Centre (JRC), GHSL Data Package 2023, GHS-POP R2023A: residential population, 30 arc-second grid (about 1 km), epochs 1975-2030. Census counts from the Census of India disaggregated to the grid using GHSL built-up surface, then fitted to UN World Population Prospects totals
+
+- **Link:** https://ghsl.jrc.ec.europa.eu/ghs_pop2023.php (no login)
+- **Used in:** `POP_population-grid_1975-to-2030_MH_BNY_DIST`
+
 ## Forest Survey of India (FSI), MoEFCC, *India State of Forest Report 2023*, Volume I
 
 - **Link:** https://fsi.nic.in/forest-report-2023
@@ -39,6 +44,11 @@ Government and third-party source data keep their original terms of use. Tables 
 
 - **Link:** https://fsi.nic.in/forest-report-2023
 - **Used in:** `ENV_forest-cover_2023_MH_FSI_DIST`
+
+## Global Solar Atlas 2.0 (Solargis, for the World Bank / ESMAP), India country GIS data, long-term averages of daily totals (`India_GISdata_LTAy_AvgDailyTotals_GlobalSolarAtlas-v2_GEOTIFF`). Irradiation and PV output cover 1999-2018, air temperature 1994-2018. CC BY 4.0
+
+- **Link:** https://globalsolaratlas.info/download/india (file list: https://api.globalsolaratlas.info/download/India; no login)
+- **Used in:** `ENG_solar-pv-output-monthly_1999-to-2018_MH_BNY_DIST`, `ENG_solar-resource_1999-to-2018_MH_BNY_DIST`
 
 ## Global Wind Atlas 3 (Technical University of Denmark, DTU, with the World Bank / ESMAP), mean power density and mean wind speed at 100 m on a 250 m grid; modelled from ERA5 reanalysis for 2008-2017, downscaled with WRF and WAsP. Licence CC BY 4.0 (see globalwindatlas.info)
 
@@ -65,7 +75,7 @@ Government and third-party source data keep their original terms of use. Tables 
 - **Link:** https://imdpune.gov.in/lrfindex.php (Gridded data: `Rainfall_25_Bin.html`)
 - **Used in:** `CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST`
 
-## India Meteorological Department (IMD), RSMC New Delhi, best tracks of cyclonic disturbances over the North Indian Ocean, as cleaned in [`CLM_cyclone-best-tracks_1982-to-2026_IN_IMD`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/CLM_cyclone-best-tracks_1982-to-2026_IN_IMD/)
+## India Meteorological Department (IMD), RSMC New Delhi, best tracks of cyclonic disturbances over the North Indian Ocean, as cleaned in [`CLM_cyclone-best-tracks_1982-to-2026_IN_IMD`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/CLM_cyclone-best-tracks_1982-to-2026_IN_IMD/)
 
 - **Link:** https://rsmcnewdelhi.imd.gov.in/report.php?internal_menu=MzM=
 - **Used in:** `CLM_cyclone-crossings_1982-to-2025_MH_BNY_DIST`
@@ -95,9 +105,9 @@ Government and third-party source data keep their original terms of use. Tables 
 - **Link:** https://censusindia.gov.in/nada/index.php/catalog/1457
 - **Used in:** `POP_single-year-age_2011_MH_ORGI_DIST`
 
-## Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, Houselisting and Housing Census, table HH-14 "Percentage of households to total households by amenities and assets" (one file per district, `HLPCA-27<district code>-2011_H14_census.xlsx`)
+## Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, Houselisting and Housing Census, table HH-14 "Percentage of households to total households by amenities and assets" (one file per district, `HLPCA-<state><district>-2011_H14_census.xlsx`)
 
-- **Link:** https://censusindia.gov.in/nada/index.php/catalog (catalog ids 9795-9829; e.g. Nagpur: https://censusindia.gov.in/nada/index.php/catalog/9803)
+- **Link:** https://censusindia.gov.in/nada/index.php/catalog (catalog ids 9236-9938, idno `PC11_HL14-<state>-<district>`; e.g. Nagpur: https://censusindia.gov.in/nada/index.php/catalog/9803)
 - **Used in:** `HOU_household-amenities-hh14_2011_MH_ORGI_DIST`
 
 ## Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, Primary Census Abstract (PCA)
@@ -107,7 +117,7 @@ Government and third-party source data keep their original terms of use. Tables 
 
 ## Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, Table C-20 "Disabled population by type of disability, age and sex"
 
-- **Link:** https://censusindia.gov.in/nada/index.php/catalog (one file per state/UT plus India; catalog ids in [`_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv))
+- **Link:** https://censusindia.gov.in/nada/index.php/catalog (one file per state/UT plus India; catalog ids in [`_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv))
 - **Used in:** `POP_disabled-population_2011_MH_ORGI_DIST`
 
 ## POP_coastal-districts_2011_STATES_BNY_DIST

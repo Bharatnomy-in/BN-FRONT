@@ -15,16 +15,16 @@ Number of rural households and how many have a functional household tap connecti
 - **Table taken from:** JJM dashboard, "Households with tap water supply" table, state-wise and each state's district-wise view (the dashboard's `Bind_table_graph` data)
 - **Link:** https://ejalshakti.gov.in/jjmreport/JJMIndia.aspx
 - **Downloaded:** 28 Oct 2026
-- **Original file:** [`_sources/jalshakti-jjm/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/jalshakti-jjm/raw/) (the JSON the dashboard returns)
+- **Original file:** [`_sources/jalshakti-jjm/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/jalshakti-jjm/raw/) (the JSON the dashboard returns)
 
 ## Columns
 
 | Column | Type | Unit | Description |
 |---|---|---|---|
 | `state_ut` | text |  | State or UT. `State total` rows are the dashboard's state figures |
-| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/geography.csv). Blank for All India and for old units LGD no longer lists |
+| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv). Blank for All India and for old units LGD no longer lists |
 | `district` | text |  | District as spelled on the dashboard |
-| `lgd_district_code` | text |  | District code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/geography.csv). Blank for totals and names that could not be matched |
+| `lgd_district_code` | text |  | District code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv). Blank for totals and names that could not be matched |
 | `date` | text |  | Date the dashboard was read (figures are live, as on that date) |
 | `jjm_district_code` | text |  | District code used by the dashboard |
 | `total_households` | integer |  | Rural households |
@@ -41,9 +41,9 @@ These describe the full warehouse table (all states).
 
 - Rural households only. Urban water supply (e.g. Nagpur city) is not covered by JJM; Delhi and Chandigarh are not on the dashboard.
 - The dashboard is live; a later download will give different figures.
-- `lgd_state_code` and `lgd_district_code` added on 5 Nov 2026 from the LGD directory (see [`_reference/README.md`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/README.md)). LGD codes identify today's state or district; for years before a split (Telangana 2014, Ladakh 2019, new districts) the same code covers a larger area than it does now.
+- `lgd_state_code` and `lgd_district_code` added on 5 Nov 2026 from the LGD directory (see [`_reference/README.md`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/README.md)). LGD codes identify today's state or district; for years before a split (Telangana 2014, Ladakh 2019, new districts) the same code covers a larger area than it does now.
 
 ## Where this comes from
 
-- Warehouse folder [`WAT_tap-water-connections-rural_2026-10_STATES_MOJS_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/WAT_tap-water-connections-rural_2026-10_STATES_MOJS_DIST) at commit `930603697458`
+- Warehouse folder [`WAT_tap-water-connections-rural_2026-10_STATES_MOJS_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/WAT_tap-water-connections-rural_2026-10_STATES_MOJS_DIST) at commit `b8f4a587d0b9`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `WAT_tap-water-connections-rural_2026-10_MH_MOJS_DIST.csv`, `WAT_tap-water-connections-rural_2026-10_MH_MOJS_DIST.json`.

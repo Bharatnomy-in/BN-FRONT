@@ -14,17 +14,17 @@ Area under mangroves in every coastal district, by canopy density, from the 2021
 - **Data:** Forest Survey of India (FSI), MoEFCC, *India State of Forest Report 2023*, Volume I
 - **Table taken from:** Table 3.4 "District-wise Mangrove Cover Assessment 2023" (report pages 76-98, PDF pages 130-133)
 - **Link:** https://fsi.nic.in/forest-report-2023
-- **Downloaded:** 19 Oct 2026 (PDF in [`_sources/fsi-isfr/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/fsi-isfr/raw/))
-- **Script:** [`pipelines/fsi-isfr/build_mangrove_district.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/pipelines/fsi-isfr/build_mangrove_district.py)
+- **Downloaded:** 19 Oct 2026 (PDF in [`_sources/fsi-isfr/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/fsi-isfr/raw/))
+- **Script:** [`pipelines/fsi-isfr/build_mangrove_district.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/pipelines/fsi-isfr/build_mangrove_district.py)
 
 ## Columns
 
 | Column | Type | Unit | Description |
 |---|---|---|---|
 | `state_ut` | text |  | State or Union Territory |
-| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/geography.csv) |
+| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv) |
 | `district` | text |  | District as spelled in the report. `State total` = the report's state total |
-| `lgd_district_code` | text |  | District code in the LGD, from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/geography.csv). Blank for totals and names that could not be matched |
+| `lgd_district_code` | text |  | District code in the LGD, from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv). Blank for totals and names that could not be matched |
 | `year` | text |  | Assessment: `2021` (ISFR 2021, revised raster-based) or `2023` |
 | `very_dense_mangrove_sq_km` | number | km² | Mangrove with canopy density 70% and above, sq km |
 | `moderately_dense_mangrove_sq_km` | number | km² | Mangrove with canopy density 40% to 70%, sq km |
@@ -47,5 +47,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`ENV_mangrove-cover_2021-to-2023_STATES_FSI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/ENV_mangrove-cover_2021-to-2023_STATES_FSI_DIST) at commit `930603697458`
+- Warehouse folder [`ENV_mangrove-cover_2021-to-2023_STATES_FSI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/ENV_mangrove-cover_2021-to-2023_STATES_FSI_DIST) at commit `b8f4a587d0b9`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `ENV_mangrove-cover_2021-to-2023_MH_FSI_DIST.csv`, `ENV_mangrove-cover_2021-to-2023_MH_FSI_DIST.json`.

@@ -1,6 +1,6 @@
 {
   "warehouse_repo": "https://github.com/sarveshkant2003-afk/bharatnomy-data",
-  "warehouse_sha": "930603697458e4ad288a0344bcd0c4c001d4462c",
+  "warehouse_sha": "b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded",
   "build_date": "2026-11-18",
   "datasets": [
     {
@@ -376,6 +376,60 @@
     },
     {
       "state": "maharashtra",
+      "dataset": "ENG_solar-pv-output-monthly_1999-to-2018_MH_BNY_DIST",
+      "lens": "EPM",
+      "path": "states/maharashtra/energy-policy/ENG_solar-pv-output-monthly_1999-to-2018_MH_BNY_DIST",
+      "json_file": "ENG_solar-pv-output-monthly_1999-to-2018_MH_BNY_DIST.json",
+      "warehouse_parts": [
+        "ENG_solar-pv-output-monthly_1999-to-2018_STATES_BNY_DIST"
+      ],
+      "rows": 420,
+      "warehouse_rows_for_state": 420,
+      "state_total_rows_dropped": 0,
+      "merge_duplicates_dropped": 0,
+      "merge_conflicts_dropped": 0,
+      "columns": [
+        "state_ut",
+        "lgd_state_code",
+        "district",
+        "lgd_district_code",
+        "district_census_code",
+        "month_of_year",
+        "pvout_kwh_kwp_day"
+      ]
+    },
+    {
+      "state": "maharashtra",
+      "dataset": "ENG_solar-resource_1999-to-2018_MH_BNY_DIST",
+      "lens": "EPM",
+      "path": "states/maharashtra/energy-policy/ENG_solar-resource_1999-to-2018_MH_BNY_DIST",
+      "json_file": "ENG_solar-resource_1999-to-2018_MH_BNY_DIST.json",
+      "warehouse_parts": [
+        "ENG_solar-resource_1999-to-2018_STATES_BNY_DIST"
+      ],
+      "rows": 35,
+      "warehouse_rows_for_state": 35,
+      "state_total_rows_dropped": 0,
+      "merge_duplicates_dropped": 0,
+      "merge_conflicts_dropped": 0,
+      "columns": [
+        "state_ut",
+        "lgd_state_code",
+        "district",
+        "lgd_district_code",
+        "district_census_code",
+        "ghi_kwh_m2_day",
+        "dni_kwh_m2_day",
+        "dif_kwh_m2_day",
+        "gti_kwh_m2_day",
+        "pvout_kwh_kwp_day",
+        "optimum_tilt_deg",
+        "air_temperature_c",
+        "raster_coverage_pct"
+      ]
+    },
+    {
+      "state": "maharashtra",
       "dataset": "ENV_active-fires_2001-to-2025_MH_BNY_DIST",
       "lens": "CAR",
       "path": "states/maharashtra/climate-adaptation/ENV_active-fires_2001-to-2025_MH_BNY_DIST",
@@ -500,7 +554,7 @@
       "path": "states/maharashtra/energy-policy/HOU_household-amenities-hh14_2011_MH_ORGI_DIST",
       "json_file": "HOU_household-amenities-hh14_2011_MH_ORGI_DIST.json",
       "warehouse_parts": [
-        "HOU_household-amenities-hh14_2011_MH_ORGI_DIST"
+        "HOU_household-amenities-hh14_2011_STATES_ORGI_DIST"
       ],
       "rows": 103,
       "warehouse_rows_for_state": 103,
@@ -512,6 +566,7 @@
         "lgd_state_code",
         "district",
         "lgd_district_code",
+        "state_census_code",
         "district_census_code",
         "district_census_name",
         "residence",
@@ -841,6 +896,33 @@
         "disabled_multiple_persons",
         "disabled_multiple_males",
         "disabled_multiple_females"
+      ]
+    },
+    {
+      "state": "maharashtra",
+      "dataset": "POP_population-grid_1975-to-2030_MH_BNY_DIST",
+      "lens": "CAR",
+      "path": "states/maharashtra/climate-adaptation/POP_population-grid_1975-to-2030_MH_BNY_DIST",
+      "json_file": "POP_population-grid_1975-to-2030_MH_BNY_DIST.json",
+      "warehouse_parts": [
+        "POP_population-grid_1975-to-2030_STATES_BNY_DIST"
+      ],
+      "rows": 420,
+      "warehouse_rows_for_state": 420,
+      "state_total_rows_dropped": 0,
+      "merge_duplicates_dropped": 0,
+      "merge_conflicts_dropped": 0,
+      "columns": [
+        "state_ut",
+        "lgd_state_code",
+        "district",
+        "lgd_district_code",
+        "district_census_code",
+        "year",
+        "population_persons",
+        "grid_land_area_sq_km",
+        "population_density_per_sq_km",
+        "source_flag"
       ]
     },
     {

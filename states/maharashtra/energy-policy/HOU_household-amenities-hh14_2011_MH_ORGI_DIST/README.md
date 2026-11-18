@@ -1,6 +1,6 @@
-# Household amenities and assets by district, Maharashtra, 2011 — Maharashtra
+# Household amenities and assets by district, 2011 — Maharashtra
 
-Share of households by condition and material of the house (roof, wall, floor), rooms, size, ownership, drinking water source and location, lighting, latrine, bathing, drainage, cooking fuel, kitchen, banking and assets, for every district of Maharashtra, total / rural / urban. All 135 indicators of Census 2011 table HH-14. This is the district rows of [`HOU_household-amenities-hh14_2011_MH_ORGI_SDT`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/HOU_household-amenities-hh14_2011_MH_ORGI_SDT/) (which also has the tehsils), kept as its own table so district-level users and the front repo can use it directly. It covers the household energy-access variables: main source of lighting (electricity) and main cooking fuel (LPG/PNG, firewood, crop residue, cowdung, coal, kerosene, electricity, biogas).
+Share of households by condition and material of the house, drinking water, **main source of lighting (electricity, kerosene, solar)**, latrine, drainage, **cooking fuel (LPG/PNG, firewood, crop residue, cowdung, coal, kerosene, electricity, biogas)**, kitchen, banking and assets, for all 640 districts of India (Census 2011), total / rural / urban. All 135 indicators of Census 2011 table HH-14. The household energy-access variables of the energy sheet (electrification, clean cooking fuel, LPG/PNG, biomass, coal for cooking) come from this table.
 
 ## Coverage
 
@@ -10,20 +10,21 @@ Share of households by condition and material of the house (roof, wall, floor), 
 
 ## Source
 
-- **Data:** Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, Houselisting and Housing Census, table HH-14 "Percentage of households to total households by amenities and assets" (one file per district, `HLPCA-27<district code>-2011_H14_census.xlsx`)
-- **Link:** https://censusindia.gov.in/nada/index.php/catalog (catalog ids 9795-9829; e.g. Nagpur: https://censusindia.gov.in/nada/index.php/catalog/9803)
-- **Downloaded:** 5 Nov 2026
-- **Original files:** [`_sources/orgi-census2011/raw/hl14-mh/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/orgi-census2011/raw/hl14-mh/)
-- **Scripts:** [`pipelines/orgi-census2011/fetch_hl14_mh.sh`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/pipelines/orgi-census2011/fetch_hl14_mh.sh), [`build_hl14_mh.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/pipelines/orgi-census2011/build_hl14_mh.py) (writes this table and the sub-district one)
+- **Data:** Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, Houselisting and Housing Census, table HH-14 "Percentage of households to total households by amenities and assets" (one file per district, `HLPCA-<state><district>-2011_H14_census.xlsx`)
+- **Link:** https://censusindia.gov.in/nada/index.php/catalog (catalog ids 9236-9938, idno `PC11_HL14-<state>-<district>`; e.g. Nagpur: https://censusindia.gov.in/nada/index.php/catalog/9803)
+- **Downloaded:** 18 Nov 2026
+- **Original files:** 640 files, about 550 MB, not committed (too large); `_sources/orgi-census2011/raw/hl14/` after running the fetch script. Catalog ids: [`_sources/orgi-census2011/raw/orgi-census2011_hl14-catalog-ids_2011.tsv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/orgi-census2011/raw/orgi-census2011_hl14-catalog-ids_2011.tsv)
+- **Scripts:** [`pipelines/orgi-census2011/fetch_hl14.sh`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/pipelines/orgi-census2011/fetch_hl14.sh), [`build_hl14.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/pipelines/orgi-census2011/build_hl14.py) (writes this table and its sub-district twin)
 
 ## Columns
 
 | Column | Type | Unit | Description |
 |---|---|---|---|
-| `state_ut` | text |  | Maharashtra, 27 |
-| `lgd_state_code` | text |  | Maharashtra, 27 |
-| `district` | text |  | District by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/geography.csv)) |
-| `lgd_district_code` | text |  | District by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_reference/geography.csv)) |
+| `state_ut` | text |  | State/UT by today's name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv), via the Census 2011 district code) |
+| `lgd_state_code` | text |  | State/UT by today's name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv), via the Census 2011 district code) |
+| `district` | text |  | District by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv)); blank LGD code for Mahe and Yanam (Puducherry regions LGD does not list as districts) |
+| `lgd_district_code` | text |  | District by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv)); blank LGD code for Mahe and Yanam (Puducherry regions LGD does not list as districts) |
+| `state_census_code` | text |  | Census 2011 state code |
 | `district_census_code` | text |  | Census 2011 district code and name |
 | `district_census_name` | text |  | Census 2011 district code and name |
 | `residence` | text |  | `Total`, `Rural` or `Urban` |
@@ -169,14 +170,14 @@ Units are read from the column name (warehouse convention). Empty cells (`null` 
 
 These describe the full warehouse table (all states).
 
-- **2011 geography.** Rows are the 35 districts and their tehsils as in Census 2011; `Thane` includes today's Palghar (2014). District names and LGD codes are today's.
-- Mumbai City and Mumbai Suburban are fully urban, so they have no `Rural` row.
-- Values are percentages as printed (one decimal). A category group adds up to 100 within rounding (99.7 to 100.3).
-- Kutcha / tin / asbestos roofs (a heat-exposure indicator) are `roof_grass_thatch_bamboo_wood_mud_etc_pct`, `roof_plastic_polythene_pct` and `roof_g_i_metal_asbestos_sheets_pct`; temporary houses are `house_structure_*temporary_pct`.
-- Checks (18 Nov 2026): 103 rows = 35 districts x Total and Urban + 33 Rural; no duplicate keys (`district_census_code`, `residence`); all values 0-100; lighting and cooking-fuel groups add up to 99.8-100.3; identical to the district rows of the sub-district table. Nagpur (total): electricity 92.1%, fire-wood 32.0%, LPG/PNG 60.2%, as in the file.
-- For other states, the same table is on the Census portal (one file per district); not taken yet.
+- **2011 geography.** Rows are the 640 districts of Census 2011 (and their sub-districts). Districts created later (e.g. Palghar from Thane) are inside their 2011 parent. State and district names and LGD codes are today's: a 2011 Andhra Pradesh district now in Telangana has `state_ut` = Telangana; `state_census_code` keeps the 2011 state.
+- Fully urban districts (e.g. Mumbai, Mumbai Suburban, Chennai, Kolkata, Hyderabad) have no `Rural` row; a few fully rural ones have no `Urban` row.
+- Values are percentages as printed (one decimal). A category group adds up to 100 within rounding.
+- The same files also have town, ward and village rows; these are not converted yet.
+- [`HOU_household-amenities-hh14_2011_MH_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/HOU_household-amenities-hh14_2011_MH_ORGI_DIST/) and `_SDT` (Maharashtra only) are the same data for one state, kept because they were published first.
+- Checks (18 Nov 2026): 1,908 rows = 640 districts x Total (640), Rural (631), Urban (637); no duplicate keys (`district_census_code`, `residence`); every `state_ut` in the standard list; all values 0-100; lighting, cooking-fuel and drinking-water groups add up to 99.7-100.3; Maharashtra rows identical to [`HOU_household-amenities-hh14_2011_MH_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/HOU_household-amenities-hh14_2011_MH_ORGI_DIST/). Spot checks against the files: Lalitpur (UP) total electricity 35.4%, LPG/PNG 9.5%; Kottayam (Kerala) 96.6%, 39.0%.
 
 ## Where this comes from
 
-- Warehouse folder [`HOU_household-amenities-hh14_2011_MH_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/HOU_household-amenities-hh14_2011_MH_ORGI_DIST) at commit `930603697458`
+- Warehouse folder [`HOU_household-amenities-hh14_2011_STATES_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/HOU_household-amenities-hh14_2011_STATES_ORGI_DIST) at commit `b8f4a587d0b9`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `HOU_household-amenities-hh14_2011_MH_ORGI_DIST.csv`, `HOU_household-amenities-hh14_2011_MH_ORGI_DIST.json`.

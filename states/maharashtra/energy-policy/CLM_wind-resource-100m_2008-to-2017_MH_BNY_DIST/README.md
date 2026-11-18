@@ -12,9 +12,9 @@ How much wind energy is available at turbine hub height (100 m) in each district
 
 - **Data:** Global Wind Atlas 3 (Technical University of Denmark, DTU, with the World Bank / ESMAP), mean power density and mean wind speed at 100 m on a 250 m grid; modelled from ERA5 reanalysis for 2008-2017, downscaled with WRF and WAsP. Licence CC BY 4.0 (see globalwindatlas.info)
 - **Link:** https://globalwindatlas.info/ (country download for India, layers "power-density" and "wind-speed" at 100 m; no login)
-- **Downloaded:** 12 Nov 2026 (rasters not committed, about 425 MB; `pipelines/global-wind-atlas/fetch_gwa.sh` downloads them, see [`_sources/global-wind-atlas/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/global-wind-atlas/))
-- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/_sources/datameet-maps/))
-- **Script:** [`pipelines/global-wind-atlas/build_district_wind_resource.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/pipelines/global-wind-atlas/build_district_wind_resource.py)
+- **Downloaded:** 12 Nov 2026 (rasters not committed, about 425 MB; `pipelines/global-wind-atlas/fetch_gwa.sh` downloads them, see [`_sources/global-wind-atlas/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/global-wind-atlas/))
+- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/datameet-maps/))
+- **Script:** [`pipelines/global-wind-atlas/build_district_wind_resource.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/pipelines/global-wind-atlas/build_district_wind_resource.py)
 
 ## How it is computed
 
@@ -49,5 +49,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`CLM_wind-resource-100m_2008-to-2017_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/930603697458e4ad288a0344bcd0c4c001d4462c/CLM_wind-resource-100m_2008-to-2017_STATES_BNY_DIST) at commit `930603697458`
+- Warehouse folder [`CLM_wind-resource-100m_2008-to-2017_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/CLM_wind-resource-100m_2008-to-2017_STATES_BNY_DIST) at commit `b8f4a587d0b9`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `CLM_wind-resource-100m_2008-to-2017_MH_BNY_DIST.csv`, `CLM_wind-resource-100m_2008-to-2017_MH_BNY_DIST.json`.
