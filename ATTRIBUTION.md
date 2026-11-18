@@ -75,7 +75,7 @@ Government and third-party source data keep their original terms of use. Tables 
 - **Link:** https://imdpune.gov.in/lrfindex.php (Gridded data: `Rainfall_25_Bin.html`)
 - **Used in:** `CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST`
 
-## India Meteorological Department (IMD), RSMC New Delhi, best tracks of cyclonic disturbances over the North Indian Ocean, as cleaned in [`CLM_cyclone-best-tracks_1982-to-2026_IN_IMD`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/CLM_cyclone-best-tracks_1982-to-2026_IN_IMD/)
+## India Meteorological Department (IMD), RSMC New Delhi, best tracks of cyclonic disturbances over the North Indian Ocean, as cleaned in [`CLM_cyclone-best-tracks_1982-to-2026_IN_IMD`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/CLM_cyclone-best-tracks_1982-to-2026_IN_IMD/)
 
 - **Link:** https://rsmcnewdelhi.imd.gov.in/report.php?internal_menu=MzM=
 - **Used in:** `CLM_cyclone-crossings_1982-to-2025_MH_BNY_DIST`
@@ -117,8 +117,13 @@ Government and third-party source data keep their original terms of use. Tables 
 
 ## Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, Table C-20 "Disabled population by type of disability, age and sex"
 
-- **Link:** https://censusindia.gov.in/nada/index.php/catalog (one file per state/UT plus India; catalog ids in [`_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv))
+- **Link:** https://censusindia.gov.in/nada/index.php/catalog (one file per state/UT plus India; catalog ids in [`_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/orgi-census2011/raw/orgi-census2011_c20-catalog-ids_2011.tsv))
 - **Used in:** `POP_disabled-population_2011_MH_ORGI_DIST`
+
+## Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, table B-04 "Main workers classified by age, industrial category and sex" (one file per state/UT plus India, `DDW-B04-<state>00.xls`)
+
+- **Link:** https://censusindia.gov.in/nada/index.php/catalog (catalog ids 43036-43071, idno `PC11_B04-<state>`; e.g. Jharkhand: https://censusindia.gov.in/nada/index.php/catalog/43056)
+- **Used in:** `LAB_main-workers-by-industry_2011_MH_ORGI_DIST`
 
 ## POP_coastal-districts_2011_STATES_BNY_DIST
 

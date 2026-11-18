@@ -15,16 +15,16 @@ Census 2011 population of each age from 0 to 99, 100+ and "age not stated", by s
 - **Table taken from:** "C-13: Single year age returns by residence and sex, Maharashtra - 2011", file `DDW-2700C-13.xls`
 - **Link:** https://censusindia.gov.in/nada/index.php/catalog/1457
 - **Downloaded:** 28 Oct 2026
-- **Original file:** [`_sources/orgi-census2011/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/orgi-census2011/raw/)
+- **Original file:** [`_sources/orgi-census2011/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/orgi-census2011/raw/)
 
 ## Columns
 
 | Column | Type | Unit | Description |
 |---|---|---|---|
 | `state_ut` | text |  | Maharashtra |
-| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv). Blank for All India and for old units LGD no longer lists |
+| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/geography.csv). Blank for All India and for old units LGD no longer lists |
 | `district` | text |  | District as spelled by the Census. `State total` = Maharashtra's published total |
-| `lgd_district_code` | text |  | District code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv). Blank for totals and names that could not be matched |
+| `lgd_district_code` | text |  | District code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/geography.csv). Blank for totals and names that could not be matched |
 | `district_census_code` | text |  | Census 2011 district code (Nagpur = 505) |
 | `age` | text |  | `All ages`, `0` ... `99`, `100+`, `Age not stated` |
 | `persons_total` | integer |  | Population, rural + urban |
@@ -45,9 +45,9 @@ These describe the full warehouse table (all states).
 
 - Only Maharashtra is here; other states' C-13 tables are separate files on the same portal (catalog "C-13 ... <state> - 2011").
 - `All ages` rows are the published totals; leave them out before adding ages up.
-- `lgd_state_code` and `lgd_district_code` added on 5 Nov 2026 from the LGD directory (see [`_reference/README.md`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/README.md)). LGD codes identify today's state or district; for years before a split (Telangana 2014, Ladakh 2019, new districts) the same code covers a larger area than it does now.
+- `lgd_state_code` and `lgd_district_code` added on 5 Nov 2026 from the LGD directory (see [`_reference/README.md`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/README.md)). LGD codes identify today's state or district; for years before a split (Telangana 2014, Ladakh 2019, new districts) the same code covers a larger area than it does now.
 
 ## Where this comes from
 
-- Warehouse folder [`POP_single-year-age_2011_MH_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/POP_single-year-age_2011_MH_ORGI_DIST) at commit `b8f4a587d0b9`
+- Warehouse folder [`POP_single-year-age_2011_MH_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/POP_single-year-age_2011_MH_ORGI_DIST) at commit `cd7ce2d67310`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `POP_single-year-age_2011_MH_ORGI_DIST.csv`, `POP_single-year-age_2011_MH_ORGI_DIST.json`.

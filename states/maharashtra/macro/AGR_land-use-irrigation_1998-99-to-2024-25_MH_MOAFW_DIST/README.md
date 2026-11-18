@@ -15,16 +15,16 @@ The nine-fold land use classification (forests, non-agricultural uses, barren la
 - **Table taken from:** LUS portal "Grand Query Report", district data, Maharashtra, all land-use and source-of-irrigation items, unit hectare, queried one year at a time
 - **Link:** https://data.desagri.gov.in/weblus/lus-grand-query-report
 - **Downloaded:** 28 Oct 2026
-- **Original files:** [`_sources/moafw-lus-district/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/moafw-lus-district/raw/) (the report HTML for each year)
+- **Original files:** [`_sources/moafw-lus-district/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/moafw-lus-district/raw/) (the report HTML for each year)
 
 ## Columns
 
 | Column | Type | Unit | Description |
 |---|---|---|---|
 | `state_ut` | text |  | Maharashtra |
-| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv). Blank for All India and for old units LGD no longer lists |
+| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/geography.csv). Blank for All India and for old units LGD no longer lists |
 | `district` | text |  | District as spelled on the portal (current names, e.g. Ahilyanagar, even for old years). `State total` = the portal's "Total of Maharashtra" row. `Maharashtra_Total` = a second total row the portal prints for 2021-22 to 2023-24 with only cropped-area and irrigation figures |
-| `lgd_district_code` | text |  | District code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv). Blank for totals and names that could not be matched |
+| `lgd_district_code` | text |  | District code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/geography.csv). Blank for totals and names that could not be matched |
 | `year` | text |  | Agricultural year (July-June) |
 | `reporting_area_ha` | integer | hectares | Area for which land use is reported, ha |
 | `forests_ha` | integer | hectares | Classification of reporting area, ha (same items as `AGR_land-use-classification_*`) |
@@ -72,9 +72,9 @@ These describe the full warehouse table (all states).
 - The portal has district data for Maharashtra only for 1998-99 to 2002-03 and 2020-21 to 2024-25; other years return empty tables.
 - Since 2020-21 most districts show `-` for cropped and irrigated area (district irrigation is not reported), so irrigation is only available for 1998-99 to 2002-03. Cells printed as `-` or left empty are blank here; the portal does not say why.
 - Agricultural vs non-agricultural land: agricultural land = net sown + current fallows + other fallows + culturable waste + tree crops (the LUS definition of agricultural or culturable land, as in `agricultural_land_000_ha` of `AGR_land-use-classification_*`); non-agricultural uses are in `area_non_agricultural_uses_ha`. Irrigated vs rain-fed: rain-fed = `net_area_sown_ha` - `net_irrigated_area_total_ha`.
-- `lgd_state_code` and `lgd_district_code` added on 5 Nov 2026 from the LGD directory (see [`_reference/README.md`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/README.md)). LGD codes identify today's state or district; for years before a split (Telangana 2014, Ladakh 2019, new districts) the same code covers a larger area than it does now.
+- `lgd_state_code` and `lgd_district_code` added on 5 Nov 2026 from the LGD directory (see [`_reference/README.md`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/README.md)). LGD codes identify today's state or district; for years before a split (Telangana 2014, Ladakh 2019, new districts) the same code covers a larger area than it does now.
 
 ## Where this comes from
 
-- Warehouse folder [`AGR_land-use-irrigation_1998-99-to-2024-25_MH_MOAFW_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/AGR_land-use-irrigation_1998-99-to-2024-25_MH_MOAFW_DIST) at commit `b8f4a587d0b9`
+- Warehouse folder [`AGR_land-use-irrigation_1998-99-to-2024-25_MH_MOAFW_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/AGR_land-use-irrigation_1998-99-to-2024-25_MH_MOAFW_DIST) at commit `cd7ce2d67310`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `AGR_land-use-irrigation_1998-99-to-2024-25_MH_MOAFW_DIST.csv`, `AGR_land-use-irrigation_1998-99-to-2024-25_MH_MOAFW_DIST.json`.

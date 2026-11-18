@@ -13,9 +13,9 @@ One row per district per year: number of vegetation fires detected by NASA's MOD
 - **Data:** NASA Fire Information for Resource Management System (FIRMS), MODIS Collection 6.1 active fire detections (1 km), India country files
 - **Link:** https://firms.modaps.eosdis.nasa.gov/country/ (files `data/country/modis/<year>/modis_<year>_India.csv`)
 - **Downloaded:** 5 Nov 2026
-- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/datameet-maps/))
-- **Original files:** [`_sources/nasa-firms/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_sources/nasa-firms/) (not committed, 31 MB; `pipelines/nasa-firms/fetch_firms.sh` downloads them)
-- **Script:** [`pipelines/nasa-firms/build_district_fires.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/pipelines/nasa-firms/build_district_fires.py)
+- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/datameet-maps/))
+- **Original files:** [`_sources/nasa-firms/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/nasa-firms/) (not committed, 31 MB; `pipelines/nasa-firms/fetch_firms.sh` downloads them)
+- **Script:** [`pipelines/nasa-firms/build_district_fires.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/pipelines/nasa-firms/build_district_fires.py)
 
 ## How it is computed
 
@@ -27,8 +27,8 @@ Each detection of type 0 (presumed vegetation fire) is placed in the Census 2011
 |---|---|---|---|
 | `state_ut` | text |  | State/UT today (Telangana and Ladakh districts are under their current state) |
 | `lgd_state_code` | text |  | State/UT today (Telangana and Ladakh districts are under their current state) |
-| `district` | text |  | District by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv)) |
-| `lgd_district_code` | text |  | District by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/_reference/geography.csv)) |
+| `district` | text |  | District by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/geography.csv)) |
+| `lgd_district_code` | text |  | District by its current name and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/geography.csv)) |
 | `year` | text |  | Calendar year |
 | `fire_detections` | integer |  | Vegetation fire detections in the year (count) |
 | `fire_detections_confidence_30_plus` | integer |  | Detections with confidence 30% or more (FIRMS "nominal" and "high"); the rest are low-confidence |
@@ -54,5 +54,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`ENV_active-fires_2001-to-2025_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/b8f4a587d0b96c3fc3154b3b92bd76a81dd5dded/ENV_active-fires_2001-to-2025_STATES_BNY_DIST) at commit `b8f4a587d0b9`
+- Warehouse folder [`ENV_active-fires_2001-to-2025_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/ENV_active-fires_2001-to-2025_STATES_BNY_DIST) at commit `cd7ce2d67310`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `ENV_active-fires_2001-to-2025_MH_BNY_DIST.csv`, `ENV_active-fires_2001-to-2025_MH_BNY_DIST.json`.
