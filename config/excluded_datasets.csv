@@ -1,3 +1,4 @@
 dataset,reason
 LAB_plfs-households-nagpur_2025_MH_MOSPI_DIST,Survey microdata (one row per household); not shipped for now (user decision 2026-11-18)
 LAB_plfs-persons-nagpur_2025_MH_MOSPI_DIST,Survey microdata (one row per person); not shipped for now (user decision 2026-11-18)
+HOU_household-amenities-hh14_2011_MH_ORGI_DIST,Superseded by HOU_household-amenities-hh14_2011_STATES_ORGI_DIST (identical Maharashtra rows); the output keeps the same name and path

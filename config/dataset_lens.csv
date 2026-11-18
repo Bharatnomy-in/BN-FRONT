@@ -3,3 +3,6 @@ AGR_crop-area-production-yield_1997-98-to-2009-10_STATES_MOAFW_DIST,COM,Approved
 POP_census-pca_2011_STATES_ORGI_DIST,CAR,Approved 2026-11-18: overrides the 2 CAR / 2 MAC tie in variables.csv (CAR-EXPOSURE)
 WAT_tap-water-connections-rural_2026-10_STATES_MOJS_DIST,CAR,Approved 2026-11-18: rural tap water coverage (CAR-WATER)
 HOU_household-amenities-hh14_2011_MH_ORGI_DIST,EPM,2026-11-18: not in variables.csv; its sub-district twin maps to EPM (7 variables) vs CAR (4); added for the energy district-data task (EPM-ACCESS)
+ENG_solar-resource_1999-to-2018_STATES_BNY_DIST,EPM,2026-11-18: solar resource / potential PV output (EPM-RENEW); same lens as the wind resource table
+ENG_solar-pv-output-monthly_1999-to-2018_STATES_BNY_DIST,EPM,2026-11-18: monthly profile of the solar table (EPM-RENEW)
+POP_population-grid_1975-to-2030_STATES_BNY_DIST,CAR,2026-11-18: population exposure (CAR-EXPOSURE); same lens as the Census population tables
