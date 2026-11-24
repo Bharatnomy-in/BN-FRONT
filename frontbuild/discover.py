@@ -59,11 +59,15 @@ def output_geography(name: DatasetName, state: State) -> str | None:
 
 
 def plan_datasets(warehouse: Path, state: State, cfg: Config, ref: Reference, report: Report) -> list[DatasetPlan]:
-    """Group district tables into output datasets and assign lenses."""
+    """Group the curated district tables (config/included_datasets.csv) into output datasets and assign lenses."""
+    available = district_tables(warehouse)
+    missing = sorted(set(cfg.included) - set(available))
+    if missing:
+        raise LensError("config/included_datasets.csv lists tables the warehouse does not have:\n  " + "\n  ".join(missing))
     groups: dict[tuple[str, ...], list[DatasetName]] = {}
-    for folder in district_tables(warehouse):
-        if folder in cfg.excluded:
-            report.add("Datasets skipped", f"`{folder}`: {cfg.excluded[folder]}")
+    for folder in available:
+        if folder not in cfg.included:
+            report.add("Datasets skipped", f"`{folder}`: not in config/included_datasets.csv")
             continue
         name = DatasetName.parse(folder)
         geo = output_geography(name, state)

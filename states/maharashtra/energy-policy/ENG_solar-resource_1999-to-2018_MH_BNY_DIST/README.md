@@ -12,13 +12,13 @@ How much sunlight reaches the ground and how much electricity a solar panel woul
 
 - **Data:** Global Solar Atlas 2.0 (Solargis, for the World Bank / ESMAP), India country GIS data, long-term averages of daily totals (`India_GISdata_LTAy_AvgDailyTotals_GlobalSolarAtlas-v2_GEOTIFF`). Irradiation and PV output cover 1999-2018, air temperature 1994-2018. CC BY 4.0
 - **Link:** https://globalsolaratlas.info/download/india (file list: https://api.globalsolaratlas.info/download/India; no login)
-- **Downloaded:** 18 Nov 2026 (rasters not committed, about 820 MB; `pipelines/global-solar-atlas/fetch_gsa.sh` downloads them, see [`_sources/global-solar-atlas/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/global-solar-atlas/))
-- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/datameet-maps/))
-- **Script:** [`pipelines/global-solar-atlas/build_district_solar_resource.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/pipelines/global-solar-atlas/build_district_solar_resource.py) (writes both solar tables)
+- **Downloaded:** 18 Nov 2026 (rasters not committed, about 820 MB; `pipelines/global-solar-atlas/fetch_gsa.sh` downloads them, see [`_sources/global-solar-atlas/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/_sources/global-solar-atlas/))
+- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/_sources/datameet-maps/))
+- **Script:** [`pipelines/global-solar-atlas/build_district_solar_resource.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/pipelines/global-solar-atlas/build_district_solar_resource.py) (writes both solar tables)
 
 ## How it is computed
 
-- District value = plain mean of the grid cells whose centre lies inside the district's 2011 boundary (GHI, DNI, DIF, GTI on a 9 arc-second grid, about 250 m; PVOUT and temperature on 30 arc-seconds, about 1 km; optimum tilt on 2 arc-minutes). Same method as [`CLM_wind-resource-100m_*`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/CLM_wind-resource-100m_2008-to-2017_STATES_BNY_DIST/).
+- District value = plain mean of the grid cells whose centre lies inside the district's 2011 boundary (GHI, DNI, DIF, GTI on a 9 arc-second grid, about 250 m; PVOUT and temperature on 30 arc-seconds, about 1 km; optimum tilt on 2 arc-minutes). Same method as [`CLM_wind-resource-100m_*`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/CLM_wind-resource-100m_2008-to-2017_STATES_BNY_DIST/).
 - `raster_coverage_pct` = cells with a value as % of the cells the district's area would hold; a district below 50% would be left blank (none is; Lakshadweep is lowest at 53%, its islands are small).
 
 ## Columns
@@ -52,5 +52,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`ENG_solar-resource_1999-to-2018_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/ENG_solar-resource_1999-to-2018_STATES_BNY_DIST) at commit `41650b8bb197`
+- Warehouse folder [`ENG_solar-resource_1999-to-2018_STATES_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/ENG_solar-resource_1999-to-2018_STATES_BNY_DIST) at commit `ff7d662c4206`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `ENG_solar-resource_1999-to-2018_MH_BNY_DIST.csv`, `ENG_solar-resource_1999-to-2018_MH_BNY_DIST.json`.

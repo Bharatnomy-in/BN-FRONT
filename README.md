@@ -52,14 +52,14 @@ output; CI ([`validate.yml`](.github/workflows/validate.yml)) rebuilds on every 
 | `states.csv` | States to build (`state_slug,state_code_short,lgd_state_code`) |
 | `lens_folders.csv` | Lens ID → folder name |
 | `dataset_lens.csv` | Lens for datasets that are missing from, or tied in, the warehouse's `variables.csv` |
-| `excluded_datasets.csv` | District tables deliberately not shipped, with the reason |
+| `included_datasets.csv` | The curated list of warehouse district tables that are shipped, with the reason; anything not listed is left out |
 | `derived_columns.csv` | Extra computed columns (`dataset,new_column,formula,unit,description`) |
 | `profile_indicators.csv` | Columns of the district profile |
 
 ## Add a state
 
 1. Add one line to `config/states.csv`, e.g. `karnataka,KA,29` (the LGD state code is in the warehouse's `_reference/geography.csv`).
-2. Run `python build.py`. Every district table with rows for that state is filtered, named with the state code, and written to `states/<slug>/`.
+2. Run `python build.py`. Every table in `config/included_datasets.csv` with rows for that state is filtered, named with the state code, and written to `states/<slug>/`.
 3. Read `BUILD_REPORT.md`: check new lens questions, missing districts and districts with no 2011 boundary.
 4. The district profile uses the same indicators for every state (the `MH` in dataset names is swapped for the state's code); indicators with no data for a state show up under Errors in the report.
 

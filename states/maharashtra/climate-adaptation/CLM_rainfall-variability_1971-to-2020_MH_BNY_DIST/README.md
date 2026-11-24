@@ -13,8 +13,8 @@ One row per district: average yearly rainfall over 1971-2020, its standard devia
 - **Data:** India Meteorological Department (IMD), Pune. Daily rainfall on a 0.25 x 0.25 degree grid (Pai et al. 2014)
 - **Link:** https://imdpune.gov.in/lrfindex.php (Gridded data: `Rainfall_25_Bin.html`)
 - **Downloaded:** 28 Oct 2026
-- **Built from:** the yearly totals in [`CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST/) (district averages over 2011 boundaries; method described there)
-- **Script:** [`pipelines/imd-gridded/build_district_indices.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/pipelines/imd-gridded/build_district_indices.py)
+- **Built from:** the yearly totals in [`CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST/) (district averages over 2011 boundaries; method described there)
+- **Script:** [`pipelines/imd-gridded/build_district_indices.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/pipelines/imd-gridded/build_district_indices.py)
 
 ## How it is computed
 
@@ -49,5 +49,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`CLM_rainfall-variability_1971-to-2020_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/CLM_rainfall-variability_1971-to-2020_MH_BNY_DIST) at commit `41650b8bb197`
+- Warehouse folder [`CLM_rainfall-variability_1971-to-2020_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/CLM_rainfall-variability_1971-to-2020_MH_BNY_DIST) at commit `ff7d662c4206`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `CLM_rainfall-variability_1971-to-2020_MH_BNY_DIST.csv`, `CLM_rainfall-variability_1971-to-2020_MH_BNY_DIST.json`.

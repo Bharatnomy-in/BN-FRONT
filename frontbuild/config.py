@@ -30,7 +30,7 @@ class Config:
     states: list[State]
     lens_folders: dict[str, str]  # lens_id -> folder name
     dataset_lens: dict[str, str]  # warehouse dataset -> lens_id (overrides)
-    excluded: dict[str, str]  # warehouse dataset -> reason
+    included: dict[str, str]  # warehouse dataset -> why it is shipped (the curated list; nothing else is)
     derived: pd.DataFrame
     profile_indicators: pd.DataFrame
 
@@ -42,12 +42,12 @@ def load_config() -> Config:
     ]
     lens = read_text_csv(CONFIG_DIR / "lens_folders.csv")
     dataset_lens = read_text_csv(CONFIG_DIR / "dataset_lens.csv")
-    excluded = read_text_csv(CONFIG_DIR / "excluded_datasets.csv")
+    included = read_text_csv(CONFIG_DIR / "included_datasets.csv")
     return Config(
         states=states,
         lens_folders=dict(zip(lens.lens_id, lens.folder)),
         dataset_lens=dict(zip(dataset_lens.dataset, dataset_lens.lens_id)),
-        excluded=dict(zip(excluded.dataset, excluded.reason)),
+        included=dict(zip(included.dataset, included.reason)),
         derived=read_text_csv(CONFIG_DIR / "derived_columns.csv", comment="#"),
         profile_indicators=read_text_csv(CONFIG_DIR / "profile_indicators.csv", comment="#"),
     )

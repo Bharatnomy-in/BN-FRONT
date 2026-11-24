@@ -1,0 +1,17 @@
+dataset,reason
+CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST,"Climate: seasonal rainfall, departure, heavy-rain days, dry spells, SPI (approved 2026-11-24)"
+CLM_rainfall-variability_1971-to-2020_MH_BNY_DIST,Climate: year-to-year rainfall variability (approved 2026-11-24)
+CLM_temperature-indices_1951-to-2024_MH_BNY_DIST,"Climate: temperature, heat waves, warm nights (approved 2026-11-24)"
+CLM_heat-indicators-nagpur_1951-to-2025_MH_BNY_DIST,Climate: Nagpur heat indicators with land surface temperature (approved 2026-11-24)
+CLM_cyclone-crossings_1982-to-2025_STATES_BNY_DIST,Climate: cyclone tracks crossing each district (approved 2026-11-24)
+ENV_aqi-days-by-category_2015-to-2026_MH_BNY_DIST,Climate: air quality days by category (approved 2026-11-24)
+ENV_active-fires_2001-to-2025_STATES_BNY_DIST,Climate: active fire detections (approved 2026-11-24)
+ENV_forest-cover_2023_STATES_FSI_DIST,Climate: forest cover (approved 2026-11-24)
+ENV_mangrove-cover_2021-to-2023_STATES_FSI_DIST,Climate: mangrove cover (approved 2026-11-24)
+ENG_power-station-generation-co2_2017-18-to-2025-26_MH_BNY_DIST,Energy: CEA power stations by district - generation and CO2 (added 2026-11-24)
+ENG_fly-ash-power-stations_FY2025-26_MH_BNY_DIST,Energy: CEA coal plants by district - fly ash (added 2026-11-24)
+ENG_power-plants_2021_STATES_WRI_DIST,Energy: every power plant with coordinates (website map layer)
+ENG_solar-resource_1999-to-2018_STATES_BNY_DIST,Energy: solar resource and potential PV output
+CLM_wind-resource-100m_2008-to-2017_STATES_BNY_DIST,Energy: wind power density at 100 m
+WAT_odf-plus-villages_2022-to-2026_STATES_MOJS_DIST,Sanitation: Swachh Bharat (Grameen) ODF Plus villages (added 2026-11-24)
+WAT_tap-water-connections-rural_2026-10_STATES_MOJS_DIST,Water: Jal Jeevan Mission rural tap water coverage

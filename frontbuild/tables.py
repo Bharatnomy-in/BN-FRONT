@@ -4,7 +4,7 @@ All values stay as strings the whole way through, so nothing is rounded or
 re-formatted by accident. Column *types* (text / integer / number) are worked out
 separately and only used when writing JSON.
 
-Order of steps (see CLAUDE.md, "Per-dataset processing"):
+Order of steps:
 read -> filter to state -> clean -> fix district codes -> merge parts -> derived columns -> sort.
 """
 from __future__ import annotations

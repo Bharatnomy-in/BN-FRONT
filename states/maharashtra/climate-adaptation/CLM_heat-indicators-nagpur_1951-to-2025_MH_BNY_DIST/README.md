@@ -13,7 +13,7 @@ One row per year for Nagpur: hottest day and night, heat wave days, warm nights,
 - **Data:** India Meteorological Department (IMD) Pune daily gridded data: maximum and minimum temperature, 1.0 x 1.0 degree, 1951-2024; rainfall, 0.25 x 0.25 degree, 1951-2025. NASA MOD11A2 v6.1 land surface temperature (Terra MODIS, 8-day, 1 km)
 - **Link:** https://imdpune.gov.in/lrfindex.php ; https://modis.ornl.gov/rst/api/v1/
 - **Downloaded:** 28 Oct 2026
-- **Original files:** [`_sources/imd-gridded/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/imd-gridded/) (not committed, 1.9 GB; download steps in its README) and [`_sources/nasa-modis-lst/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/nasa-modis-lst/raw/)
+- **Original files:** [`_sources/imd-gridded/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/_sources/imd-gridded/) (not committed, 1.9 GB; download steps in its README) and [`_sources/nasa-modis-lst/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/_sources/nasa-modis-lst/raw/)
 
 ## How it is computed
 
@@ -30,9 +30,9 @@ One row per year for Nagpur: hottest day and night, heat wave days, warm nights,
 | Column | Type | Unit | Description |
 |---|---|---|---|
 | `state_ut` | text |  | Maharashtra, Nagpur |
-| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_reference/geography.csv). Blank for All India and for old units LGD no longer lists |
+| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/_reference/geography.csv). Blank for All India and for old units LGD no longer lists |
 | `district` | text |  | Maharashtra, Nagpur |
-| `lgd_district_code` | text |  | District code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_reference/geography.csv). Blank for totals and names that could not be matched |
+| `lgd_district_code` | text |  | District code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/_reference/geography.csv). Blank for totals and names that could not be matched |
 | `year` | text |  | Calendar year |
 | `tmax_highest_c` | number | °C | Highest daily maximum / minimum temperature of the year, C |
 | `tmax_mean_mar_may_c` | number | °C | Mean daily max / min temperature, March-May, C |
@@ -66,9 +66,9 @@ These describe the full warehouse table (all states).
 - **LST is incomplete for now:** day LST covers 2002-2022 and night LST 2002-2011, because the download was stopped partway; only years with all 8-day composites downloaded are filled. 2001 has gaps in the MODIS record and is left blank.
 - Land surface temperature is the temperature of the ground and roofs, not of the air; it runs well above air temperature on summer afternoons.
 - Blank cells are years outside a source's coverage.
-- `lgd_state_code` and `lgd_district_code` added on 5 Nov 2026 from the LGD directory (see [`_reference/README.md`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_reference/README.md)). LGD codes identify today's state or district; for years before a split (Telangana 2014, Ladakh 2019, new districts) the same code covers a larger area than it does now.
+- `lgd_state_code` and `lgd_district_code` added on 5 Nov 2026 from the LGD directory (see [`_reference/README.md`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/_reference/README.md)). LGD codes identify today's state or district; for years before a split (Telangana 2014, Ladakh 2019, new districts) the same code covers a larger area than it does now.
 
 ## Where this comes from
 
-- Warehouse folder [`CLM_heat-indicators-nagpur_1951-to-2025_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/CLM_heat-indicators-nagpur_1951-to-2025_MH_BNY_DIST) at commit `41650b8bb197`
+- Warehouse folder [`CLM_heat-indicators-nagpur_1951-to-2025_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/ff7d662c4206e81ed483c708cd23a4ab4c946d2c/CLM_heat-indicators-nagpur_1951-to-2025_MH_BNY_DIST) at commit `ff7d662c4206`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `CLM_heat-indicators-nagpur_1951-to-2025_MH_BNY_DIST.csv`, `CLM_heat-indicators-nagpur_1951-to-2025_MH_BNY_DIST.json`.

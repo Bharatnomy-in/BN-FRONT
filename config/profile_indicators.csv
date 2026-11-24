@@ -1,5 +1,5 @@
 indicator_id,label,dataset,column,aggregation,filter,unit
-# Approved 2026-11-18 (all 20; irrigated_pct_net_sown kept although its latest year is 2002-03). One value per district; "latest" = latest year that district has.
+# Approved 2026-11-18; 2026-11-24: nine indicators dropped with their datasets (front repo cut to 16 datasets), ODF Plus Model share added. One value per district; "latest" = latest year that district has.
 rainfall_annual_mm,Annual rainfall,CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST,rainfall_annual_mm,latest,,mm
 monsoon_rain_departure_pct,Monsoon (Jun-Sep) rainfall departure from normal,CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST,rainfall_jun_sep_departure_pct,latest,,%
 heavy_rain_days,Heavy rain days (64.5 mm or more),CLM_rainfall-indices_1951-to-2025_MH_BNY_DIST,heavy_rain_days_64_5mm,latest,,days
@@ -7,16 +7,8 @@ rainfall_cv_pct,Year-to-year variability of annual rainfall (CV),CLM_rainfall-va
 tmax_mean_c,Mean daily maximum temperature,CLM_temperature-indices_1951-to-2024_MH_BNY_DIST,tmax_mean_c,latest,,°C
 tmax_anomaly_c,Mean maximum temperature anomaly,CLM_temperature-indices_1951-to-2024_MH_BNY_DIST,tmax_mean_anomaly_c,latest,,°C
 heatwave_days,Heatwave days,CLM_temperature-indices_1951-to-2024_MH_BNY_DIST,heatwave_days,latest,,days
-wet_bulb_max_c,Highest wet-bulb temperature,CLM_wind-humidity_1981-to-2025_MH_BNY_DIST,wet_bulb_temp_highest_c,latest,,°C
 forest_cover_pct,Forest cover share of area,ENV_forest-cover_2023_MH_FSI_DIST,forest_cover_pct_of_area,latest,,%
-built_up_pct,Built-up share of area (observed),ENV_built-up-surface_1975-to-2030_MH_BNY_DIST,built_up_pct_of_area,latest,is_projection == 'no',%
 fire_detections,Active fire detections,ENV_active-fires_2001-to-2025_MH_BNY_DIST,fire_detections,latest,,count
-is_coastal,Coastal district,POP_coastal-districts_2011_MH_BNY_DIST,is_coastal,latest,,yes/no
-population,Population (Census 2011),POP_census-pca_2011_MH_ORGI_DIST,population_persons,latest,area == 'total',persons
-households,Households (Census 2011),POP_census-pca_2011_MH_ORGI_DIST,households,latest,area == 'total',households
 rural_tap_water_pct,Rural households with tap water,WAT_tap-water-connections-rural_2026-10_MH_MOJS_DIST,households_with_tap_pct,latest,,%
-mpi_headcount_pct,Multidimensionally poor population,SOC_multidimensional-poverty_2015-16-to-2019-21_MH_NITI_DIST,headcount_ratio_pct,latest,,%
-irrigated_pct_net_sown,Net irrigated share of net sown area,AGR_land-use-irrigation_1998-99-to-2024-25_MH_MOAFW_DIST,net_irrigated_pct_of_net_sown,latest,,%
-cropping_intensity_pct,Cropping intensity,AGR_land-use-irrigation_1998-99-to-2024-25_MH_MOAFW_DIST,cropping_intensity_pct,latest,,%
-sugarcane_yield,Sugarcane yield,AGR_crop-area-production-yield_1997-98-to-2022-23_MH_MOAFW_DIST,yield,latest,crop == 'Sugarcane' and season == 'Whole Year',tonnes/ha
 wind_power_density_100m,Wind power density at 100 m,CLM_wind-resource-100m_2008-to-2017_MH_BNY_DIST,power_density_100m_mean_w_m2,latest,,W/m²
+odf_plus_model_villages_pct,Villages that are ODF Plus Model (Swachh Bharat),WAT_odf-plus-villages_2022-to-2026_MH_MOJS_DIST,odf_plus_model_villages_pct,latest,,%
