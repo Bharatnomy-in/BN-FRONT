@@ -6,3 +6,6 @@ HOU_household-amenities-hh14_2011_MH_ORGI_DIST,EPM,2026-11-18: not in variables.
 ENG_solar-resource_1999-to-2018_STATES_BNY_DIST,EPM,2026-11-18: solar resource / potential PV output (EPM-RENEW); same lens as the wind resource table
 ENG_solar-pv-output-monthly_1999-to-2018_STATES_BNY_DIST,EPM,2026-11-18: monthly profile of the solar table (EPM-RENEW)
 POP_population-grid_1975-to-2030_STATES_BNY_DIST,CAR,2026-11-18: population exposure (CAR-EXPOSURE); same lens as the Census population tables
+ENG_power-plants_2021_STATES_WRI_DIST,EPM,2026-11-24: not in variables.csv; plant locations by district for the website's power plant layer (EPM-GEN)
+ENG_power-plant-generation_2013-to-2019_STATES_WRI_DIST,EPM,2026-11-24: not in variables.csv; generation of the same plants (EPM-GEN)
+ENV_aqi-days-by-category_2015-to-2026_MH_BNY_DIST,CAR,2026-11-24: not in variables.csv; district pooling of the CITY AQI table whose variables map to CAR-AIR

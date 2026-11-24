@@ -10,6 +10,7 @@
 | [`CLM_temperature-indices_1951-to-2024_MH_BNY_DIST`](CLM_temperature-indices_1951-to-2024_MH_BNY_DIST/) | Temperature and heat wave indicators by district, Maharashtra, 1951 to 2024 | 1951 to 2024 | 2,590 |
 | [`CLM_wind-humidity_1981-to-2025_MH_BNY_DIST`](CLM_wind-humidity_1981-to-2025_MH_BNY_DIST/) | Wind and humidity by district, Maharashtra, 1981 to 2025 | 1981 to 2025 | 1,575 |
 | [`ENV_active-fires_2001-to-2025_MH_BNY_DIST`](ENV_active-fires_2001-to-2025_MH_BNY_DIST/) | Satellite fire detections by district, India, 2001 to 2025 | 2001 to 2025 | 875 |
+| [`ENV_aqi-days-by-category_2015-to-2026_MH_BNY_DIST`](ENV_aqi-days-by-category_2015-to-2026_MH_BNY_DIST/) | Air quality days by district, Maharashtra, 2015 to 2026 | 2015 to 2026 | 154 |
 | [`ENV_built-up-surface_1975-to-2030_MH_BNY_DIST`](ENV_built-up-surface_1975-to-2030_MH_BNY_DIST/) | Built-up surface by district, India, 1975 to 2030 (every 5 years) | 1975 to 2030 | 420 |
 | [`ENV_forest-cover_2023_MH_FSI_DIST`](ENV_forest-cover_2023_MH_FSI_DIST/) | Forest cover by district, 2023 | 2023 | 36 |
 | [`ENV_mangrove-cover_2021-to-2023_MH_FSI_DIST`](ENV_mangrove-cover_2021-to-2023_MH_FSI_DIST/) | Mangrove cover by district, 2021 and 2023 | 2021 to 2023 | 14 |

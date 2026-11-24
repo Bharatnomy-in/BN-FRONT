@@ -1,7 +1,7 @@
 {
   "warehouse_repo": "https://github.com/sarveshkant2003-afk/bharatnomy-data",
-  "warehouse_sha": "cd7ce2d673103cc0e606e3cc37e49a9ae75f849a",
-  "build_date": "2026-11-18",
+  "warehouse_sha": "41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a",
+  "build_date": "2026-11-24",
   "datasets": [
     {
       "state": "maharashtra",
@@ -376,6 +376,75 @@
     },
     {
       "state": "maharashtra",
+      "dataset": "ENG_power-plant-generation_2013-to-2018_MH_WRI_DIST",
+      "lens": "EPM",
+      "path": "states/maharashtra/energy-policy/ENG_power-plant-generation_2013-to-2018_MH_WRI_DIST",
+      "json_file": "ENG_power-plant-generation_2013-to-2018_MH_WRI_DIST.json",
+      "warehouse_parts": [
+        "ENG_power-plant-generation_2013-to-2019_STATES_WRI_DIST"
+      ],
+      "rows": 595,
+      "warehouse_rows_for_state": 595,
+      "state_total_rows_dropped": 0,
+      "merge_duplicates_dropped": 0,
+      "merge_conflicts_dropped": 0,
+      "columns": [
+        "state_ut",
+        "lgd_state_code",
+        "district",
+        "lgd_district_code",
+        "district_census_code",
+        "plant",
+        "gppd_idnr",
+        "year",
+        "generation_gwh",
+        "estimated_generation_gwh",
+        "estimated_generation_note"
+      ]
+    },
+    {
+      "state": "maharashtra",
+      "dataset": "ENG_power-plants_2021_MH_WRI_DIST",
+      "lens": "EPM",
+      "path": "states/maharashtra/energy-policy/ENG_power-plants_2021_MH_WRI_DIST",
+      "json_file": "ENG_power-plants_2021_MH_WRI_DIST.json",
+      "warehouse_parts": [
+        "ENG_power-plants_2021_STATES_WRI_DIST"
+      ],
+      "rows": 190,
+      "warehouse_rows_for_state": 190,
+      "state_total_rows_dropped": 0,
+      "merge_duplicates_dropped": 0,
+      "merge_conflicts_dropped": 0,
+      "columns": [
+        "state_ut",
+        "lgd_state_code",
+        "district",
+        "lgd_district_code",
+        "district_census_code",
+        "plant",
+        "gppd_idnr",
+        "capacity_mw",
+        "latitude",
+        "longitude",
+        "primary_fuel",
+        "other_fuel1",
+        "other_fuel2",
+        "other_fuel3",
+        "commissioning_year",
+        "owner",
+        "source",
+        "url",
+        "geolocation_source",
+        "wepp_id",
+        "year_of_capacity_data",
+        "generation_data_source",
+        "district_match",
+        "source_flag"
+      ]
+    },
+    {
+      "state": "maharashtra",
       "dataset": "ENG_solar-pv-output-monthly_1999-to-2018_MH_BNY_DIST",
       "lens": "EPM",
       "path": "states/maharashtra/energy-policy/ENG_solar-pv-output-monthly_1999-to-2018_MH_BNY_DIST",
@@ -457,6 +526,40 @@
         "share_mar_may_pct",
         "share_oct_dec_pct",
         "rank_in_state_year"
+      ]
+    },
+    {
+      "state": "maharashtra",
+      "dataset": "ENV_aqi-days-by-category_2015-to-2026_MH_BNY_DIST",
+      "lens": "CAR",
+      "path": "states/maharashtra/climate-adaptation/ENV_aqi-days-by-category_2015-to-2026_MH_BNY_DIST",
+      "json_file": "ENV_aqi-days-by-category_2015-to-2026_MH_BNY_DIST.json",
+      "warehouse_parts": [
+        "ENV_aqi-days-by-category_2015-to-2026_MH_BNY_DIST"
+      ],
+      "rows": 154,
+      "warehouse_rows_for_state": 154,
+      "state_total_rows_dropped": 0,
+      "merge_duplicates_dropped": 0,
+      "merge_conflicts_dropped": 0,
+      "columns": [
+        "state_ut",
+        "lgd_state_code",
+        "district",
+        "lgd_district_code",
+        "year",
+        "cities",
+        "city_days_reported",
+        "city_days_good",
+        "city_days_satisfactory",
+        "city_days_moderate",
+        "city_days_poor",
+        "city_days_very_poor",
+        "city_days_severe",
+        "city_days_aqi_above_100",
+        "city_days_aqi_above_100_pct",
+        "aqi_mean",
+        "aqi_highest"
       ]
     },
     {

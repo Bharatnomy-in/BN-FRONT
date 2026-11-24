@@ -1,6 +1,6 @@
 # Crop area, production and yield by district, 2010-11 to 2022-23 — Maharashtra
 
-Area sown, production and yield of every crop and season reported for every district of India, by agricultural year. This is one of two files (split by year range to keep each under 25 MB); the other is [`AGR_crop-area-production-yield_1997-98-to-2009-10_STATES_MOAFW_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/AGR_crop-area-production-yield_1997-98-to-2009-10_STATES_MOAFW_DIST/).
+Area sown, production and yield of every crop and season reported for every district of India, by agricultural year. This is one of two files (split by year range to keep each under 25 MB); the other is [`AGR_crop-area-production-yield_1997-98-to-2009-10_STATES_MOAFW_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/AGR_crop-area-production-yield_1997-98-to-2009-10_STATES_MOAFW_DIST/).
 
 ## Coverage
 
@@ -14,23 +14,23 @@ Area sown, production and yield of every crop and season reported for every dist
 - **Data:** Directorate of Economics & Statistics (DES), Ministry of Agriculture & Farmers Welfare, Crop Production Statistics (Area, Production and Yield, APY), district level
 - **Table taken from:** "Crops APY report" on the DES data portal: all states one at a time, all districts, all crops, all seasons, 1997-98 to 2022-23, format "Horizontal Crop and Vertical Year"
 - **Link:** https://data.desagri.gov.in/website/crops-apy-report-web
-- **Downloaded:** 12 Nov 2026 (report pages not committed, about 150 MB; `pipelines/moafw-apy/fetch_apy.py` downloads them, see [`_sources/moafw-apy/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/moafw-apy/))
-- **Script:** [`pipelines/moafw-apy/build_apy.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/pipelines/moafw-apy/build_apy.py)
+- **Downloaded:** 12 Nov 2026 (report pages not committed, about 150 MB; `pipelines/moafw-apy/fetch_apy.py` downloads them, see [`_sources/moafw-apy/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/moafw-apy/))
+- **Script:** [`pipelines/moafw-apy/build_apy.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/pipelines/moafw-apy/build_apy.py)
 
 ## Source (2010-11 to 2022-23)
 
 - **Data:** Directorate of Economics & Statistics (DES), Ministry of Agriculture & Farmers Welfare, Crop Production Statistics (Area, Production and Yield, APY), district level
 - **Table taken from:** "Crops APY report" on the DES data portal: all states one at a time, all districts, all crops, all seasons, 1997-98 to 2022-23, format "Horizontal Crop and Vertical Year"
 - **Link:** https://data.desagri.gov.in/website/crops-apy-report-web
-- **Downloaded:** 12 Nov 2026 (report pages not committed, about 150 MB; `pipelines/moafw-apy/fetch_apy.py` downloads them, see [`_sources/moafw-apy/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/moafw-apy/))
-- **Script:** [`pipelines/moafw-apy/build_apy.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/pipelines/moafw-apy/build_apy.py)
+- **Downloaded:** 12 Nov 2026 (report pages not committed, about 150 MB; `pipelines/moafw-apy/fetch_apy.py` downloads them, see [`_sources/moafw-apy/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/moafw-apy/))
+- **Script:** [`pipelines/moafw-apy/build_apy.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/pipelines/moafw-apy/build_apy.py)
 
 ## Columns
 
 | Column | Type | Unit | Description |
 |---|---|---|---|
 | `state_ut` | text |  | State or UT (`Dadra & Nagar Haveli`, `Daman & Diu` as reported for the years before their merger) |
-| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/geography.csv) |
+| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_reference/geography.csv) |
 | `district` | text |  | District as spelled by DES |
 | `lgd_district_code` | text |  | District code in the LGD; blank where the DES name could not be matched (50 of 748 names, e.g. old or differently spelled districts) |
 | `year` | text |  | Agricultural year (July-June), e.g. `2022-23` |
@@ -56,6 +56,6 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`AGR_crop-area-production-yield_1997-98-to-2009-10_STATES_MOAFW_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/AGR_crop-area-production-yield_1997-98-to-2009-10_STATES_MOAFW_DIST) at commit `cd7ce2d67310`
-- Warehouse folder [`AGR_crop-area-production-yield_2010-11-to-2022-23_STATES_MOAFW_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/AGR_crop-area-production-yield_2010-11-to-2022-23_STATES_MOAFW_DIST) at commit `cd7ce2d67310`
+- Warehouse folder [`AGR_crop-area-production-yield_1997-98-to-2009-10_STATES_MOAFW_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/AGR_crop-area-production-yield_1997-98-to-2009-10_STATES_MOAFW_DIST) at commit `41650b8bb197`
+- Warehouse folder [`AGR_crop-area-production-yield_2010-11-to-2022-23_STATES_MOAFW_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/AGR_crop-area-production-yield_2010-11-to-2022-23_STATES_MOAFW_DIST) at commit `41650b8bb197`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `AGR_crop-area-production-yield_1997-98-to-2022-23_MH_MOAFW_DIST.csv`, `AGR_crop-area-production-yield_1997-98-to-2022-23_MH_MOAFW_DIST.json`.

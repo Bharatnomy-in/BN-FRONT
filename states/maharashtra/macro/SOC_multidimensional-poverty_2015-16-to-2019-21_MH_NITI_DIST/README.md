@@ -14,15 +14,15 @@ Share of people who are multidimensionally poor (deprived in at least a third of
 - **Data:** NITI Aayog, *National Multidimensional Poverty Index: A Progress Review 2023* (July 2023), computed from NFHS-4 and NFHS-5
 - **Table taken from:** each state's "<State>: Overview of Districts — Headcount Ratio, Intensity and MPI" table, and the "<State>'s Headcount Ratio, Intensity and MPI" table of each state profile (state rows) and of the India overview (All India)
 - **Link:** https://www.niti.gov.in/sites/default/files/2023-08/India-National-Multidimentional-Poverty-Index-2023.pdf
-- **Downloaded:** 12 Nov 2026 (PDF in [`_sources/niti-mpi/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/niti-mpi/raw/))
-- **Script:** [`pipelines/niti-mpi/build_mpi_district.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/pipelines/niti-mpi/build_mpi_district.py)
+- **Downloaded:** 12 Nov 2026 (PDF in [`_sources/niti-mpi/raw/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/niti-mpi/raw/))
+- **Script:** [`pipelines/niti-mpi/build_mpi_district.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/pipelines/niti-mpi/build_mpi_district.py)
 
 ## Columns
 
 | Column | Type | Unit | Description |
 |---|---|---|---|
 | `state_ut` | text |  | State or UT; `All India` for the national row |
-| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/geography.csv) |
+| `lgd_state_code` | text |  | State/UT code in the Local Government Directory (LGD), from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_reference/geography.csv) |
 | `district` | text |  | District as spelled in the report (alternative names in brackets as printed). `State total` = the state's own figure |
 | `lgd_district_code` | text |  | District code in the LGD. Blank for totals and names that could not be matched |
 | `year` | text |  | NFHS round: `2015-16` (NFHS-4) or `2019-21` (NFHS-5) |
@@ -46,5 +46,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`SOC_multidimensional-poverty_2015-16-to-2019-21_STATES_NITI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/SOC_multidimensional-poverty_2015-16-to-2019-21_STATES_NITI_DIST) at commit `cd7ce2d67310`
+- Warehouse folder [`SOC_multidimensional-poverty_2015-16-to-2019-21_STATES_NITI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/SOC_multidimensional-poverty_2015-16-to-2019-21_STATES_NITI_DIST) at commit `41650b8bb197`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `SOC_multidimensional-poverty_2015-16-to-2019-21_MH_NITI_DIST.csv`, `SOC_multidimensional-poverty_2015-16-to-2019-21_MH_NITI_DIST.json`.

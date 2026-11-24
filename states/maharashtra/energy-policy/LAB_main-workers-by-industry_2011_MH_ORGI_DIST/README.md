@@ -14,15 +14,15 @@ Number of main workers (people who worked 6 months or more in the year) in each 
 - **Data:** Office of the Registrar General & Census Commissioner, India (ORGI), Census of India 2011, table B-04 "Main workers classified by age, industrial category and sex" (one file per state/UT plus India, `DDW-B04-<state>00.xls`)
 - **Link:** https://censusindia.gov.in/nada/index.php/catalog (catalog ids 43036-43071, idno `PC11_B04-<state>`; e.g. Jharkhand: https://censusindia.gov.in/nada/index.php/catalog/43056)
 - **Downloaded:** 18 Nov 2026
-- **Original files:** [`_sources/orgi-census2011/raw/b04/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/orgi-census2011/raw/b04/) (36 files, 15 MB); catalog ids in [`raw/orgi-census2011_b04-catalog-ids_2011.tsv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/orgi-census2011/raw/orgi-census2011_b04-catalog-ids_2011.tsv)
-- **Scripts:** [`pipelines/orgi-census2011/fetch_b04.sh`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/pipelines/orgi-census2011/fetch_b04.sh), [`build_b04.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/pipelines/orgi-census2011/build_b04.py)
+- **Original files:** [`_sources/orgi-census2011/raw/b04/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/orgi-census2011/raw/b04/) (36 files, 15 MB); catalog ids in [`raw/orgi-census2011_b04-catalog-ids_2011.tsv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/orgi-census2011/raw/orgi-census2011_b04-catalog-ids_2011.tsv)
+- **Scripts:** [`pipelines/orgi-census2011/fetch_b04.sh`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/pipelines/orgi-census2011/fetch_b04.sh), [`build_b04.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/pipelines/orgi-census2011/build_b04.py)
 
 ## Columns
 
 | Column | Type | Unit | Description |
 |---|---|---|---|
-| `state_ut` | text |  | District rows: today's state and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/geography.csv)). `State total` rows: the state **as in 2011** (see Notes). `All India` row: blank code |
-| `lgd_state_code` | text |  | District rows: today's state and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_reference/geography.csv)). `State total` rows: the state **as in 2011** (see Notes). `All India` row: blank code |
+| `state_ut` | text |  | District rows: today's state and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_reference/geography.csv)). `State total` rows: the state **as in 2011** (see Notes). `All India` row: blank code |
+| `lgd_state_code` | text |  | District rows: today's state and LGD code (from [`_reference/geography.csv`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_reference/geography.csv)). `State total` rows: the state **as in 2011** (see Notes). `All India` row: blank code |
 | `state_census_code` | text |  | Census 2011 state code (`00` = India) |
 | `district` | text |  | District by today's name and LGD code; `State total` for the state's published total, blank on the India row. LGD code blank for Mahe and Yanam (Puducherry regions LGD does not list as districts) |
 | `lgd_district_code` | text |  | District by today's name and LGD code; `State total` for the state's published total, blank on the India row. LGD code blank for Mahe and Yanam (Puducherry regions LGD does not list as districts) |
@@ -105,5 +105,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`LAB_main-workers-by-industry_2011_STATES_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/LAB_main-workers-by-industry_2011_STATES_ORGI_DIST) at commit `cd7ce2d67310`
+- Warehouse folder [`LAB_main-workers-by-industry_2011_STATES_ORGI_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/LAB_main-workers-by-industry_2011_STATES_ORGI_DIST) at commit `41650b8bb197`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `LAB_main-workers-by-industry_2011_MH_ORGI_DIST.csv`, `LAB_main-workers-by-industry_2011_MH_ORGI_DIST.json`.

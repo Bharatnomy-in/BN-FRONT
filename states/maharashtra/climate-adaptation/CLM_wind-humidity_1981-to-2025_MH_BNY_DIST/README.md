@@ -13,9 +13,9 @@ One row per district per year: mean wind speed at 10 m and 50 m, highest wind, p
 - **Data:** NASA Prediction Of Worldwide Energy Resources (POWER), daily, meteorology from the MERRA-2 reanalysis on a 0.5 x 0.625 degree grid (parameters WS10M, WS10M_MAX, WD10M, WS50M, RH2M, T2MWET)
 - **Link:** https://power.larc.nasa.gov/ (daily point API)
 - **Downloaded:** 5 Nov 2026
-- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/datameet-maps/))
-- **Original files:** [`_sources/nasa-power/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/_sources/nasa-power/) (not committed; `pipelines/nasa-power/fetch_power.py` downloads them)
-- **Script:** [`pipelines/nasa-power/build_district_wind_humidity.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/pipelines/nasa-power/build_district_wind_humidity.py)
+- **District boundaries:** Census 2011 district map from DataMeet (see [`_sources/datameet-maps/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/datameet-maps/))
+- **Original files:** [`_sources/nasa-power/`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/_sources/nasa-power/) (not committed; `pipelines/nasa-power/fetch_power.py` downloads them)
+- **Script:** [`pipelines/nasa-power/build_district_wind_humidity.py`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/pipelines/nasa-power/build_district_wind_humidity.py)
 
 ## How it is computed
 
@@ -62,5 +62,5 @@ These describe the full warehouse table (all states).
 
 ## Where this comes from
 
-- Warehouse folder [`CLM_wind-humidity_1981-to-2025_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/cd7ce2d673103cc0e606e3cc37e49a9ae75f849a/CLM_wind-humidity_1981-to-2025_MH_BNY_DIST) at commit `cd7ce2d67310`
+- Warehouse folder [`CLM_wind-humidity_1981-to-2025_MH_BNY_DIST`](https://github.com/sarveshkant2003-afk/bharatnomy-data/tree/41650b8bb1975a4f4e082ba172d8b5dfb8f7db8a/CLM_wind-humidity_1981-to-2025_MH_BNY_DIST) at commit `41650b8bb197`
 - Filtered to `lgd_state_code` and cleaned by `build.py` in this repo. Files: `CLM_wind-humidity_1981-to-2025_MH_BNY_DIST.csv`, `CLM_wind-humidity_1981-to-2025_MH_BNY_DIST.json`.
